@@ -1,1 +1,5 @@
 thesis/sources
+thesis/datasets
+thesis/images
+fake-news-ai-model/dataset
+fake-news-ai-model/venv
