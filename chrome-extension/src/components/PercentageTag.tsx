@@ -1,14 +1,18 @@
 import React from 'react';
+import './PercentageTag.css'
 
 type PercentageTagProps = {
   value: number,
-  size: 'small' | 'large'
+  size: 'small' | 'large',
+  isLoading?: boolean
 }
 
 const PercentageTag: React.FC<PercentageTagProps> = (props) => {
   /* Get the background color of the tag based on how large is the percentage value */
   function getBackgroundColor() {
-    if (props.value <= 33) {
+    if (props.isLoading) {
+      return "bg-custom-indigo";
+    } else if (props.value <= 33) {
       return "bg-custom-red";
     } else if (props.value <= 66) {
       return "bg-custom-yellow";
@@ -31,9 +35,12 @@ const PercentageTag: React.FC<PercentageTagProps> = (props) => {
 
 	return (
     <article className={`${backgroundColor} ${width} ${height} flex justify-center items-center rounded`}>
-      <span className={`text-white ${fontSize} font-bold`}>{props.value}%</span>
+      {/* <span className={`text-white ${fontSize} font-bold`}>{props.value}%</span> */}
+      <div className="ml-3 dot-typing"></div>
     </article>
 	)
 }
 
 export default PercentageTag;
+
+

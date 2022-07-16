@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useState, useRef } from 'react';
-import { animateScroll } from 'react-scroll';
 
 type Article = {
   title: string,
@@ -10,11 +9,10 @@ type Article = {
 const ManualForm: React.FC<{}> = ({}) => {
   const [articleAttributes, setArticleAttributes] = useState<Article>({title: '', content: ''})
 
-  const myRef = useRef(null)
-
   async function articleFormOnSubmit(e: React.SyntheticEvent) {
     /* On form submission, send article content and title to API and get SVM model prediction. */
     e.preventDefault();
+    await new Promise(r => setTimeout(r, 2000));
 
     try {
       const response = await predictWithSvm()

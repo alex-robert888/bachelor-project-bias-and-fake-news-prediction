@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import PercentageTag from '../PercentageTag';
-import DropdownContainer from '../DropdownContainer';
-import ManualForm from './ManualForm';
+import PercentageTag from '../components/PercentageTag';
+import DropdownContainer from '../components/DropdownContainer';
+import ManualForm from '../components/ManualForm';
 import { animateScroll } from 'react-scroll';
 
 
@@ -13,7 +13,7 @@ const ManualPage: React.FC<{}> = ({}) => {
       <section className="mt-10">
         <div className="flex flex-row items-center">
           <h1 className="text-2xl mr-3 font-bold">Reliability Score:</h1>
-          <PercentageTag value={88} size="large" />
+          <PercentageTag value={88} size="large" isLoading />
         </div>
 
         <ul className="mt-6 space-y-4">

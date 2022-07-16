@@ -16,7 +16,7 @@ const DropdownContainer: React.FC<PropsDropdownContainer> = (props) => {
         <h2 className="font-bold">{props.title}</h2>
 
         <div className='ml-auto flex flex-row items-center'>
-          <PercentageTag value={props.percentage} size="small" />
+          <PercentageTag value={props.percentage} size="small" isLoading />
           <button>
             <img className="ml-6" src={downArrow} alt="down arrow" />
           </button>
