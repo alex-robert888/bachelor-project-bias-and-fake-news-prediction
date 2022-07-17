@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ManualForm from '../components/ManualForm';
-import { selectShouldShowReliabilityAnalysis } from '../store/reliabilityAnalysisSlice';
-import ReliabilityAnalysis from '../components/reliability-analysis/ReliabilityAnalysis';
+// import { selectShouldShowReliabilityAnalysis } from '../../public/store/reliabilityAnalysisSlice';
+// import ReliabilityAnalysis from '../components/reliability-analysis/ReliabilityAnalysis';
 
 
-const ManualPage: React.FC<{}> = ({}) => {
+const ManualPage = ({}) => {
   // const shouldShowReliabilityAnalysis = useSelector((state: any) => state.shouldShowReliabilityAnalysis);
   // const shouldShowReliabilityAnalysis = false;
   

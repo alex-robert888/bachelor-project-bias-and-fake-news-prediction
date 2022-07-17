@@ -1,0 +1,19 @@
+{
+  "name": "Fake News Detector",
+  "description": "A tool for content-based fake news detection, capable of being integrated with all kind of webpages: newspaper articles, reviews pages, social media.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "pinocchio-logo-16x16.png",
+    "48": "pinocchio-logo-48x48.png",
+    "128": "pinocchio-logo-128x128.png"
+  }
+}

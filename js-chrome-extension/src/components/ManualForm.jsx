@@ -1,18 +1,13 @@
 import axios from 'axios';
 import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { showReliabilityAnalysis } from '../store/reliabilityAnalysisSlice';
+// import { showReliabilityAnalysis } from '../../public/store/reliabilityAnalysisSlice';
 
-type Article = {
-  title: string,
-  content: string,
-}
-
-const ManualForm: React.FC<{}> = ({}) => {
-  const [articleAttributes, setArticleAttributes] = useState<Article>({title: '', content: ''})
+const ManualForm = ({}) => {
+  const [articleAttributes, setArticleAttributes] = useState({title: '', content: ''})
   // const dispatch = useDispatch();
 
-  async function articleFormOnSubmit(e: React.SyntheticEvent) {
+  async function articleFormOnSubmit(e) {
     /* On form submission, send article content and title to API and get SVM model prediction. */
     e.preventDefault();
     console.log("Dispatch mtf.")
