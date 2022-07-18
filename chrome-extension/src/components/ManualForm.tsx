@@ -1,7 +1,5 @@
 import axios from 'axios';
 import React, { useState, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { showReliabilityAnalysis } from '../store/reliabilityAnalysisSlice';
 
 type Article = {
   title: string,
