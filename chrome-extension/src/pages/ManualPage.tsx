@@ -1,17 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import ManualForm from '../components/ManualForm';
+import AppContext from '../AppContext';
 import ReliabilityAnalysis from '../components/reliability-analysis/ReliabilityAnalysis';
-
+import useChromeStorageLocalState from '../hooks/useChromeStorageLocalState';
 
 const ManualPage: React.FC<{}> = ({}) => {
+  const [state, setState] = useChromeStorageLocalState();
+
   function renderReliabilityAnalysis() {
-    // console.log(shouldShowReliabilityAnalysis)
-    return null;
-    // return !shouldShowReliabilityAnalysis ? null : (
-    //   <div className="mt-10">
-    //     <ReliabilityAnalysis />
-    //   </div>
-    // )      
+    if (!state.shouldShowReliabilityAnalysis)
+      return null;
+    
+    return (
+      <div className="mt-10">
+        <ReliabilityAnalysis />
+      </div>
+    )      
   }
 
 	return (

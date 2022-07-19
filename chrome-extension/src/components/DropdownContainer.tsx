@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PercentageTag from './PercentageTag';
 import downArrow from '../assets/images/down-arrow.svg';
 
@@ -16,7 +16,7 @@ const DropdownContainer: React.FC<PropsDropdownContainer> = (props) => {
         <h2 className="font-bold">{props.title}</h2>
 
         <div className='ml-auto flex flex-row items-center'>
-          <PercentageTag value={props.percentage} size="small" isLoading />
+          <PercentageTag value={props.percentage} size="small" />
           <button>
             <img className="ml-6" src={downArrow} alt="down arrow" />
           </button>

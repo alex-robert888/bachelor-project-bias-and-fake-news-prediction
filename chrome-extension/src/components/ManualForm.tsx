@@ -1,28 +1,35 @@
 import axios from 'axios';
 import React, { useState, useRef } from 'react';
+import useChromeStorageLocalState from '../hooks/useChromeStorageLocalState';
+import handleErrors from '../utils/handleErrors';
 
-type Article = {
+type TArticle = {
   title: string,
   content: string,
 }
 
 const ManualForm: React.FC<{}> = ({}) => {
-  const [articleAttributes, setArticleAttributes] = useState<Article>({title: '', content: ''})
-  // const dispatch = useDispatch();
+  const [articleAttributes, setArticleAttributes] = useState<TArticle>({title: '', content: ''})
+  const [state, setState] = useChromeStorageLocalState();
 
   async function articleFormOnSubmit(e: React.SyntheticEvent) {
     /* On form submission, send article content and title to API and get SVM model prediction. */
     e.preventDefault();
-    console.log("Dispatch mtf.")
-    // dispatch(showReliabilityAnalysis);
-    // await new Promise(r => setTimeout(r, 2000));
+    const newState = {
+      ...state, 
+      shouldShowReliabilityAnalysis: true,
+      biasedOrDeceptiveLanguageScore: undefined,
+      sourceReliabilityScore: undefined,
+      urlReliabilityScore: undefined,
+      citedSourcesScore: undefined,
+    }
+    setState(newState);
 
-    // try {
-    //   const response = await predictWithSvm()
-    // } 
-    // catch(e) {
-    //   console.log("ERROR (articleFormOnSubmit): ", e)
-    // }
+    handleErrors(async () => {
+      await new Promise(r => setTimeout(r, 1000));
+      const response = await predictWithSvm();
+      setState({...newState, biasedOrDeceptiveLanguageScore: response.data.bias_score });
+    })
   }
 
   async function predictWithSvm() {
