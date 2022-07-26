@@ -2,9 +2,15 @@ import express, { Express, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import winston from 'winston';
 import sourcesRouter from './sources-router';
+import mongoose from 'mongoose';
+
 
 const app = express();
 app.use(cors());
+
+mongoose.connect('mongodb+srv://skoda888:1234@cluster0.dvtoo5l.mongodb.net/WikipediaReliableSources?retryWrites=true&w=majority')
+        .then(() => console.log("Successfully connected to the database."))
+        .catch((e) => console.log("Failed connecting to the database: ", e));
 
 const logger = winston.createLogger({
   level: 'info',

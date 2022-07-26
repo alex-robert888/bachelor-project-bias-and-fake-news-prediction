@@ -18,7 +18,7 @@ module.exports = {
         'app': '42rem'
       },
       height: {
-        'app': '33rem'
+        'app': '34rem'
       },
       boxShadow: {
         "custom": '0px 4px 15px 0px rgba(40, 49, 95, 0.15)'

@@ -1,3 +1,8 @@
-Salut,
+* Hi Jon
 
-Voiam sa te intreb cum sa procedam cu Okapi? Din nou pare cam liniste on their side. Eu m-am gandit in feudal
+* Thank you for taking the time to make this call.
+* I thought it would be useful to have a brief discussion on this issue, to be on the same page. 
+* There are some players with scores posted with 2.0
+	* don't think it's our mistake
+	* looked over the issues from Jira and found nothing related
+	* it is very improbable that our calculations of handicaps all 
