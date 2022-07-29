@@ -22,13 +22,6 @@ const Toolbar: React.FC<{}> = ({}) => {
 
 				<li>
 					<button className="flex flex-col items-center">
-						<img className="w-5" src={selectionIcon} alt="selection icon"/>
-						<span className="text-custom-indigo font-normal">Selection</span>
-					</button>
-				</li>
-
-				<li>
-					<button className="flex flex-col items-center">
 						<img className="w-5" src={manualIcon} alt="manual icon"/>
 						<span className="text-custom-indigo font-normal">Manual</span>
 					</button>

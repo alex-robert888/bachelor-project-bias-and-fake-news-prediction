@@ -8,9 +8,16 @@ export default function useChromeStorageLocalState() {
   const stateChromeLocalStorageKey = `state_${chromeWindowContext.windowId}`
   
   return useChromeStorageLocal(stateChromeLocalStorageKey, {
+    isReliabilityAnalysisInProgress: false,
     shouldShowReliabilityAnalysis: false,
-    biasedOrDeceptiveLanguageScore: undefined,
-    sourceReliabilityScore: undefined,
+    biasedOrDeceptiveLanguage: {
+      score: undefined
+    },
+    sourceReliability: {
+      score: undefined,
+      status: undefined,
+      summary: undefined
+    },
     urlReliabilityScore: undefined,
     citedSourcesScore: undefined
   })

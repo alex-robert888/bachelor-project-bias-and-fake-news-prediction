@@ -19,7 +19,7 @@ const ManualPage: React.FC<{}> = ({}) => {
   }
 
 	return (
-    <main className="py-2 my-5 w-full">
+    <main id="manual-page" className="py-2 my-5 w-full">
       <ManualForm />
 
       {renderReliabilityAnalysis()}

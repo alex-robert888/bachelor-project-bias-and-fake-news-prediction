@@ -9,6 +9,14 @@ type PropsDropdownContainer = {
 }
 
 const DropdownContainer: React.FC<PropsDropdownContainer> = (props) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  function renderChildren() {
+    if (!isOpen) return null;
+
+    return props.children;
+  }
+
 	return (
     <article className='shadow-custom px-4'>
       {/* Dropdown title section */}
@@ -17,7 +25,7 @@ const DropdownContainer: React.FC<PropsDropdownContainer> = (props) => {
 
         <div className='ml-auto flex flex-row items-center'>
           <PercentageTag value={props.percentage} size="small" />
-          <button>
+          <button onClick={() => setIsOpen(true)}>
             <img className="ml-6" src={downArrow} alt="down arrow" />
           </button>
         </div>
@@ -25,7 +33,7 @@ const DropdownContainer: React.FC<PropsDropdownContainer> = (props) => {
 
       {/* Dropdown content */}
       <div>
-        {props.children}
+        {renderChildren()}
       </div>
     </article>
 	)

@@ -35,25 +35,31 @@ const ManualForm: React.FC<{}> = ({}) => {
   /* On form submission, send article content and title to API and get SVM model prediction. */
   async function articleFormOnSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
-    let newState = {...chromeStorageLocalState, 
-      shouldShowReliabilityAnalysis: true,
-      biasedOrDeceptiveLanguageScore: undefined,
-      sourceReliabilityScore: undefined,
-      urlReliabilityScore: undefined,
-      citedSourcesScore: undefined,
-    }
-    setChromeStorageLocalState(newState);
 
+    // Display the reliability analysis on the popup.
+    let currentState = {...chromeStorageLocalState, shouldShowReliabilityAnalysis: true}
+    setChromeStorageLocalState(currentState);
+
+    // Scroll down to the reliability analysis
+    const myElement = document.getElementById('reliability-analysis-header');
+    const topPos = myElement!.offsetTop;
+    document.getElementById('manual-page')!.scrollTop = topPos;
+
+    // Perform the analysis
     handleErrors(async () => {
-      await new Promise(r => setTimeout(r, 500));
+      // Wait for 1 second so that the buffering icons will be seen
+      await new Promise(r => setTimeout(r, 1000));
+
+      // Perform biased/deceptive language analysis and display resulting score 
       const responseBiasedOrDeceptiveLanguageScoreApi = await fetchBiasedOrDeceptiveLanguageScore();
-      setChromeStorageLocalState({...newState, biasedOrDeceptiveLanguageScore: responseBiasedOrDeceptiveLanguageScoreApi.data.bias_score });
-      newState = {...newState, biasedOrDeceptiveLanguageScore: responseBiasedOrDeceptiveLanguageScoreApi.data.bias_score}
+      currentState = {...currentState, biasedOrDeceptiveLanguage: {...currentState.biasedOrDeceptiveLanguage, score: responseBiasedOrDeceptiveLanguageScoreApi.data.bias_score}}
+      setChromeStorageLocalState(currentState);
       
-      await new Promise(r => setTimeout(r, 500));
+      // Perform source reliability analysis and display resulting score 
       const responseSourceReliabilityScoreApi = await fetchSourceReliabilityScore();
       const sourceReliabilityScore = computeSourceReliabilityScore(responseSourceReliabilityScoreApi.data);
-      setChromeStorageLocalState({...newState, sourceReliabilityScore: sourceReliabilityScore });
+      currentState = {...currentState, sourceReliability: {...currentState.sourceReliabilityScore, score: sourceReliabilityScore}};
+      setChromeStorageLocalState(currentState);
     })
   } 
 
@@ -64,12 +70,14 @@ const ManualForm: React.FC<{}> = ({}) => {
     })
   }
 
+  /* Send article url and get the reliability of the source. */
   async function fetchSourceReliabilityScore(): Promise<AxiosResponse<TSourceReliabilityScoreApiResponse, any>> {
     return await axios.get<TSourceReliabilityScoreApiResponse>('http://127.0.0.1:8080/sources', { 
       params: { url: articleAttributes.url }
     })
   }
 
+  /* Compute source reliability score by taking all statuses given by Wikipedia and take the minimum of them */
   function computeSourceReliabilityScore(responseSourceReliabilityScoreApi: TSourceReliabilityScoreApiResponse): number {
     let score = 100
     for (const s of responseSourceReliabilityScoreApi.status) {
@@ -125,7 +133,6 @@ const ManualForm: React.FC<{}> = ({}) => {
         Start Analysis
       </button>
     </form>
-
 	)
 }
 
