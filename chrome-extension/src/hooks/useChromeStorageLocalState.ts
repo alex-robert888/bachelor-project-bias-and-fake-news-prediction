@@ -1,6 +1,7 @@
 import { useChromeStorageLocal } from 'use-chrome-storage';
 import { useContext, useEffect } from 'react';
 import AppContext from '../AppContext';
+import TPage from '../types/t-page';
 
 
 export default function useChromeStorageLocalState() {
@@ -8,6 +9,7 @@ export default function useChromeStorageLocalState() {
   const stateChromeLocalStorageKey = `state_${chromeWindowContext.windowId}`
   
   return useChromeStorageLocal(stateChromeLocalStorageKey, {
+    activePage: TPage.Automatic,
     isReliabilityAnalysisInProgress: false,
     shouldShowReliabilityAnalysis: false,
     biasedOrDeceptiveLanguage: {

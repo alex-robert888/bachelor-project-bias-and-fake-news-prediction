@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       colors: {
         'custom-indigo': '#432DF0',
-        'custom-gray': '#F0F1FF',
+        'custom-purplish-gray-100': '#F0F1FF',
+        'custom-purplish-gray-200': '#ebecfa',
+        'custom-purplish-gray-300': '#dadcf2',
         'custom-gradient-indigo': '#432DF0',
         'custom-gradient-violet': '#7E4EFF',
         'custom-red': '#E52C88',
@@ -15,7 +17,8 @@ module.exports = {
         'custom-yellow': '#FFB100'
       },
       width: {
-        'app': '42rem'
+        'app': '42rem',
+        'toolbar': '4.5rem'
       },
       height: {
         'app': '34rem'
