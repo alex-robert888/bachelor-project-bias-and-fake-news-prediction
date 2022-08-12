@@ -19,15 +19,21 @@ export default function useChromeStorageLocalState() {
     },
     isReliabilityAnalysisInProgress: false,
     shouldShowReliabilityAnalysis: false,
-    biasedOrDeceptiveLanguage: {
-      score: undefined
-    },
-    sourceReliability: {
-      score: undefined,
-      status: undefined,
-      summary: undefined
-    },
-    urlReliabilityScore: undefined,
-    citedSourcesScore: undefined,
+    analysisItems: {
+      biasedLanguage: {
+        score: undefined
+      },
+      sourceReliability: {
+        score: undefined,
+        status: undefined,
+        summary: undefined
+      },
+      urlReliability: {
+        score: undefined,
+      },
+      citedSources: {
+        score: undefined
+      }
+    }
   })
 }

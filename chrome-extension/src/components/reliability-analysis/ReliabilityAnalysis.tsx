@@ -20,7 +20,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="Biased/Deceptive Language"
-            percentage={chromeStorageLocalState.biasedOrDeceptiveLanguage.score}
+            percentage={chromeStorageLocalState.analysisItems.biasedLanguage.score}
           >
             <></>
           </ReliabilityAnalysisCard>
@@ -29,7 +29,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="Source Reliability" 
-            percentage={chromeStorageLocalState.sourceReliability.score}
+            percentage={chromeStorageLocalState.analysisItems.sourceReliability.score}
           >
             <></>
           </ReliabilityAnalysisCard>
@@ -38,7 +38,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="URL Reliability" 
-            percentage={chromeStorageLocalState.urlReliabilityScore}
+            percentage={chromeStorageLocalState.analysisItems.urlReliability.score}
           >
             <></>
           </ReliabilityAnalysisCard>
@@ -47,7 +47,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="Cited Sources" 
-            percentage={chromeStorageLocalState.citedSourcesReliability}
+            percentage={chromeStorageLocalState.analysisItems.citedSources.score}
           >
             <></>
           </ReliabilityAnalysisCard>

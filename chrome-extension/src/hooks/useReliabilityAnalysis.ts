@@ -3,7 +3,7 @@ import TArticle from "../types/t-article";
 import useChromeStorageLocalState from "./useChromeStorageLocalState";
 
 
-type TBiasedOrDeceptiveLanguageScoreApiResponse = {
+type TBiasedLanguageScoreApiResponse = {
   bias_score: number
 }
 
@@ -38,7 +38,7 @@ const useReliabilityAnalysis = () => {
       // Wait for 1 second so that the buffering icons will be seen
       await new Promise(r => setTimeout(r, 1000));
     
-      currentState = await analyzeBiasedOrDeceptiveLanguage(article, currentState);
+      currentState = await analyzeBiasedLanguage(article, currentState);
       await analyzeSourceReliability(article, currentState);
     } catch(e) {
       console.error("-- Unhandled error: ", e);
@@ -46,13 +46,9 @@ const useReliabilityAnalysis = () => {
   }
   
   // Perform biased/deceptive language analysis and display resulting score 
-  async function analyzeBiasedOrDeceptiveLanguage(article: TArticle, currentState: any) {
-    const responseBiasedOrDeceptiveLanguageScoreApi = await fetchBiasedOrDeceptiveLanguageScore(article);
-    currentState = {...currentState, 
-      biasedOrDeceptiveLanguage: {...currentState.biasedOrDeceptiveLanguage, 
-        score: responseBiasedOrDeceptiveLanguageScoreApi.data.bias_score
-      }
-    }
+  async function analyzeBiasedLanguage(article: TArticle, currentState: any) {
+    const responseBiasedLanguageScoreApi = await fetchBiasedLanguageScore(article);
+    currentState = {...currentState, analysisItems: {...currentState.analysisItems, biasedLanguage: {...currentState.analysisItems.biasedLanguage, score: responseBiasedLanguageScoreApi}}};
     setChromeStorageLocalState(currentState);
     return currentState;
   }
@@ -61,17 +57,13 @@ const useReliabilityAnalysis = () => {
   async function analyzeSourceReliability(article: TArticle, currentState: any) {
     const responseSourceReliabilityScoreApi = await fetchSourceReliabilityScore(article);
     const sourceReliabilityScore = computeSourceReliabilityScore(responseSourceReliabilityScoreApi.data);
-    currentState = {...currentState, 
-      sourceReliability: {...currentState.sourceReliabilityScore, 
-        score: sourceReliabilityScore
-      }
-    };
+    currentState = {...currentState, analysisItems: {...currentState.analysisItems, sourceReliability: {...currentState.analysisItems.sourceReliability, score: sourceReliabilityScore}}};
     setChromeStorageLocalState(currentState);
   }
   
   // Send article content and title to API and get SVM model prediction.
-  async function fetchBiasedOrDeceptiveLanguageScore(article: TArticle): Promise<AxiosResponse<TBiasedOrDeceptiveLanguageScoreApiResponse, any>> {
-    return await axios.get<TBiasedOrDeceptiveLanguageScoreApiResponse>('http://127.0.0.1:5000/svm', { 
+  async function fetchBiasedLanguageScore(article: TArticle): Promise<AxiosResponse<TBiasedLanguageScoreApiResponse, any>> {
+    return await axios.get<TBiasedLanguageScoreApiResponse>('http://127.0.0.1:5000/svm', { 
       params: { title: article.title, content: article.content }
     })
   }
