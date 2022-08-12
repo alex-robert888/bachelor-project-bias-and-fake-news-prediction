@@ -48,7 +48,7 @@ const useReliabilityAnalysis = () => {
   // Perform biased/deceptive language analysis and display resulting score 
   async function analyzeBiasedLanguage(article: TArticle, currentState: any) {
     const responseBiasedLanguageScoreApi = await fetchBiasedLanguageScore(article);
-    currentState = {...currentState, analysisItems: {...currentState.analysisItems, biasedLanguage: {...currentState.analysisItems.biasedLanguage, score: responseBiasedLanguageScoreApi}}};
+    currentState = {...currentState, analysisItems: {...currentState.analysisItems, biasedLanguage: {...currentState.analysisItems.biasedLanguage, score: responseBiasedLanguageScoreApi.data.bias_score}}};
     setChromeStorageLocalState(currentState);
     return currentState;
   }
