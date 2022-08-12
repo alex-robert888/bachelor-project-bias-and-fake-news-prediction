@@ -1,28 +1,25 @@
-import React, { useContext, useEffect } from 'react';
-import ManualForm from '../components/ManualForm';
-import AppContext from '../AppContext';
-import ReliabilityAnalysis from '../components/reliability-analysis/ReliabilityAnalysis';
+import React, { useState } from 'react';
+import axios, { AxiosResponse } from 'axios';
+import handleErrors from '../utils/handleErrors';
 import useChromeStorageLocalState from '../hooks/useChromeStorageLocalState';
+import ReliabilityAnalysis from '../components/reliability-analysis/ReliabilityAnalysis';
+import type TArticle from '../types/t-article';
+import ReliabilityAnalysisForm from '../components/reliability-analysis/ReliabilityAnalysisForm';
+
 
 const ManualPage: React.FC<{}> = ({}) => {
-  const [state, setState] = useChromeStorageLocalState();
-
-  function renderReliabilityAnalysis() {
-    if (!state.shouldShowReliabilityAnalysis)
-      return null;
-    
-    return (
-      <div className="mt-10">
-        <ReliabilityAnalysis />
-      </div>
-    )      
-  }
+  const [chromeStorageLocalState, setChromeStorageLocalState] = useChromeStorageLocalState();
+  const [article, setArticle] = useState<TArticle>({
+    url: '', title: '', content: '', authors: []
+  })
 
 	return (
     <main id="manual-page" className="py-2 my-5 w-full">
-      <ManualForm />
+      <ReliabilityAnalysisForm article={article} setArticle={setArticle} />
 
-      {renderReliabilityAnalysis()}
+      {chromeStorageLocalState.shouldShowReliabilityAnalysis && 
+        <ReliabilityAnalysis />
+      }
     </main>
 	)
 }

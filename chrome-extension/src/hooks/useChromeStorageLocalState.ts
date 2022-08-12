@@ -1,5 +1,5 @@
 import { useChromeStorageLocal } from 'use-chrome-storage';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import AppContext from '../AppContext';
 import TPage from '../types/t-page';
 
@@ -10,6 +10,13 @@ export default function useChromeStorageLocalState() {
   
   return useChromeStorageLocal(stateChromeLocalStorageKey, {
     activePage: TPage.Automatic,
+    isAnalysisInProgress: false,
+    currentArticle: {
+      url: undefined,
+      title: undefined,
+      content: undefined,
+      authors: []
+    },
     isReliabilityAnalysisInProgress: false,
     shouldShowReliabilityAnalysis: false,
     biasedOrDeceptiveLanguage: {
@@ -21,6 +28,6 @@ export default function useChromeStorageLocalState() {
       summary: undefined
     },
     urlReliabilityScore: undefined,
-    citedSourcesScore: undefined
+    citedSourcesScore: undefined,
   })
 }

@@ -24,6 +24,7 @@ const App : React.FC<{}> = ({}) => {
     })();
   }, [])
 
+  /* Render the page selected from the toolbar. */
   function renderActivePage() {
     switch(activePage) {
       case TPage.Automatic:
@@ -41,10 +42,7 @@ const App : React.FC<{}> = ({}) => {
         <Header />
 
         <div className="flex flex-row">
-          <Toolbar 
-            activePage={activePage} 
-            changeActivePage={(page: TPage) => setActivePage(page)}
-          />       
+          <Toolbar activePage={activePage} changeActivePage={(page: TPage) => setActivePage(page)} />       
           
           {renderActivePage()}
         </div>

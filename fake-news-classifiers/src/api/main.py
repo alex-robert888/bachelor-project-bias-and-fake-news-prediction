@@ -8,7 +8,7 @@ from src.classifiers.models.dataset import Dataset
 from src.classifiers.models.data_leakages_clearer import DataLeakagesClearer
 from src.classifiers.models.data_pre_processor import DataPreProcessor
 from src.classifiers.models.tf_idf_feature_extraction import TfIdfFeatureExtraction
-
+from newspaper import Article
 
 app = Flask(__name__)
 CORS(app)
@@ -39,6 +39,21 @@ def svm():
     score = math.ceil(score) if score < 50 else math.floor(score)
 
     return {"bias_score": score}
+
+
+@app.route("/scrape-article")
+def scrape_article():
+    url = request.args.get('url')
+
+    article = Article(url)
+    article.download()
+    article.parse()
+
+    return {
+        "title": article.title,
+        "authors": article.authors,
+        "text": article.text
+    }
 
 
 if __name__ == "__main__":
