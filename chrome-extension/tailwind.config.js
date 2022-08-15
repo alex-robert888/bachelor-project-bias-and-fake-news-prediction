@@ -12,9 +12,12 @@ module.exports = {
         'custom-purplish-gray-300': '#dadcf2',
         'custom-gradient-indigo': '#432DF0',
         'custom-gradient-violet': '#7E4EFF',
-        'custom-red': '#E52C88',
-        'custom-green': '#1AC792',
-        'custom-yellow': '#FFB100'
+        'custom-red-100': '#E52C88',
+        'custom-red-200': '#D00000',
+        'custom-green-100': '#75D801',
+        'custom-green-200': '#1AC792',
+        'custom-yellow': '#FFB100',
+        'custom-gray': '#919191'
       },
       width: {
         'app': '42rem',

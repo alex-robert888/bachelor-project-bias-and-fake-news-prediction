@@ -40,6 +40,28 @@ def svm():
 
     return {"bias_score": score}
 
+@app.route("/headlines-lr")
+def headlines_lr():
+    headline = request.args.get('headline')
+    data_frame = DataFrame({"text": [headline]})
+
+    data_pre_processor = DataPreProcessor(data_frame)
+    data_frame = data_pre_processor.call()
+
+    data_frame.text = data_frame.text.apply(lambda text: " ".join([word for word in text]))
+
+    dataset = Dataset()
+    model = Model(
+        dataset,
+        "./../../saved-models/heading-clickbait/heading-log-reg-tf-idf-model.sav",
+        "./../../saved-models/heading-clickbait/heading-log-reg-tf-idf-vectorizer.sav",
+        TfIdfFeatureExtraction
+    )
+    model.predict_proba(data_frame.text[0])
+    score = 100 * model.predict_proba(data_frame.text[0])[0]
+    score = math.ceil(score) if score < 50 else math.floor(score)
+
+    return {"clickbait": score}
 
 @app.route("/scrape-article")
 def scrape_article():

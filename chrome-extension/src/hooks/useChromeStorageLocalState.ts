@@ -19,6 +19,7 @@ export default function useChromeStorageLocalState() {
     },
     isReliabilityAnalysisInProgress: false,
     shouldShowReliabilityAnalysis: false,
+    analysisTotalScore: undefined,
     analysisItems: {
       biasedLanguage: {
         score: undefined
@@ -27,6 +28,9 @@ export default function useChromeStorageLocalState() {
         score: undefined,
         status: undefined,
         summary: undefined
+      },
+      headlineClickbait: {
+        score: undefined
       },
       urlReliability: {
         score: undefined,

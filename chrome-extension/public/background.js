@@ -30,7 +30,7 @@ chrome.runtime.onStartup.addListener(() => {
 // Trigger a reliability analysis on accessing a new link
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   // Tab should be loaded and active
-  if (changeInfo.status !== 'complete' || !tab.active) return;
+  if (!tab.active) return;
   
   // Get the state of the current window
   const stateKey = `state_${tab.windowId}`;
@@ -46,17 +46,27 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   if (response.status != 200) return;
 
   // Signal to the front-end to start an analysis on the url of the current tab
-  chrome.storage.local.set({...state, [stateKey]: {...state[stateKey],
+  currentState = {...state, [stateKey]: {...state[stateKey],
     isAnalysisInProgress: true, 
     shouldShowReliabilityAnalysis: true, 
     currentArticle: {...state[stateKey].currentArticle, url: tab.url}
-  }})
+  }};
+  chrome.storage.local.set(currentState);
 
   // Add loading animation to icon
   let currentAnimationStep = 0;
-  setInterval(() => {
+  const intervalId = setInterval(async () => {
+    console.log("set image to: ", `logo-loading-step-${currentAnimationStep + 1}.png`);
     chrome.action.setIcon({path: `logo-loading-step-${currentAnimationStep + 1}.png`});
-
     currentAnimationStep = (currentAnimationStep + 1) % 3;
-  }, 1000)
+
+    const state = await chrome.storage.local.get(stateKey);
+    const isAnalysisInProgress = state[stateKey].isAnalysisInProgress;
+
+    if (!isAnalysisInProgress) {
+      console.log("Clear interval of ID: ", intervalId);
+      chrome.action.setIcon({path: 'logo-highly-reliable.png'});
+      clearInterval(intervalId);
+    }
+  }, 1000);
 })

@@ -4,7 +4,7 @@ import downArrow from '../../assets/images/down-arrow.svg';
 
 type TPropsReliabilityAnalysisCard = {
   title: string,
-  percentage: number,
+  percentage: number | 'loading' | 'N/A',
   children: JSX.Element
 }
 

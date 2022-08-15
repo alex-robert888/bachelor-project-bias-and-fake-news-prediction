@@ -7,12 +7,18 @@ import useChromeStorageLocalState from '../../hooks/useChromeStorageLocalState';
 const ReliabilityAnalysis: React.FC<{}> = ({}) => {
   const [chromeStorageLocalState, setChromeStorageLocalState] = useChromeStorageLocalState(); 
 
+  const getPercentageTagValue = (score: number) => {
+    if (score !== undefined) return score;
+        
+    return (chromeStorageLocalState.isAnalysisInProgress) ? 'loading' : 'N/A';
+  }
+
 	return (
     <section className="mt-10">
       {/* Reliability score top section */}
       <div id="reliability-analysis-header" className="flex flex-row items-center">
         <h1 className="text-2xl mr-3 font-bold">Reliability Score:</h1>
-        <PercentageTag value={88} size="large" />
+        <PercentageTag value={getPercentageTagValue(chromeStorageLocalState.analysisTotalScore)} size="large" />
       </div>
 
       {/* List of cards for each individual point of analysis */}
@@ -20,7 +26,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="Biased/Deceptive Language"
-            percentage={chromeStorageLocalState.analysisItems.biasedLanguage.score}
+            percentage={getPercentageTagValue(chromeStorageLocalState.analysisItems.biasedLanguage.score)}
           >
             <></>
           </ReliabilityAnalysisCard>
@@ -29,7 +35,16 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="Source Reliability" 
-            percentage={chromeStorageLocalState.analysisItems.sourceReliability.score}
+            percentage={getPercentageTagValue(chromeStorageLocalState.analysisItems.sourceReliability.score)}
+          >
+            <></>
+          </ReliabilityAnalysisCard>
+        </li>
+
+        <li>
+          <ReliabilityAnalysisCard 
+            title="Headline Clickbait" 
+            percentage={getPercentageTagValue(chromeStorageLocalState.analysisItems.headlineClickbait.score)}
           >
             <></>
           </ReliabilityAnalysisCard>
@@ -38,7 +53,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="URL Reliability" 
-            percentage={chromeStorageLocalState.analysisItems.urlReliability.score}
+            percentage={getPercentageTagValue(chromeStorageLocalState.analysisItems.urlReliability.score)}
           >
             <></>
           </ReliabilityAnalysisCard>
@@ -47,7 +62,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         <li>
           <ReliabilityAnalysisCard 
             title="Cited Sources" 
-            percentage={chromeStorageLocalState.analysisItems.citedSources.score}
+            percentage={getPercentageTagValue(chromeStorageLocalState.analysisItems.citedSources.score)}
           >
             <></>
           </ReliabilityAnalysisCard>
