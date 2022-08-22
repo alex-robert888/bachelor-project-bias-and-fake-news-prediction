@@ -20,11 +20,11 @@ module.exports = {
         'custom-gray': '#919191'
       },
       width: {
-        'app': '42rem',
+        'app': '50rem',
         'toolbar': '4.5rem'
       },
       height: {
-        'app': '34rem'
+        'app': '40rem'
       },
       boxShadow: {
         "custom": '0px 4px 15px 0px rgba(40, 49, 95, 0.15)'

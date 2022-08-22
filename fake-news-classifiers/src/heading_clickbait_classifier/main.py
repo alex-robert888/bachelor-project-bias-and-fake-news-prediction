@@ -6,8 +6,8 @@ if __name__ == '__main__':
     dataset = Dataset()
     model = Model(
         dataset,
-        "../../saved-models/heading-clickbait/heading-log-reg-tf-idf-model.sav",
-        "../../saved-models/heading-clickbait/heading-log-reg-tf-idf-vectorizer.sav",
+        "../../saved-models/heading-clickbait/test-heading-lr-tf-idf-model.sav",
+        "../../saved-models/heading-clickbait/test-heading-lr-tf-idf-vectorizer.sav",
         TfIdfFeatureExtraction
     )
-    x = model.validate()
+    x = model.train()

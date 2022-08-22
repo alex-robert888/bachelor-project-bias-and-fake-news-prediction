@@ -1,0 +1,74 @@
+\section{Application Development}
+This chapter provides a complete rundown on the development process of the fake news detection application build for this thesis, from inception to completion.
+
+\subsection{Functionalities}
+  The application developed for this thesis is a web extension built for Google Chrome, which provides users with an accessible tool for evaluating the reliability of online news. The extension performs a multifaceted analysis of any given news article, based upon its URL, headline, content and authors, by means of machine learning algorithms, web scraping and crowdsourcing.
+
+  The key functionalities of the application are the following:
+  \begin{enumerate}
+    \item upon landing on an online news article from a known news source, automatically extract some critical information about the article, based on its HTML source code (i.e. URL, headline, content and authors)
+    \item after successfully extracting the required information about the article, automatically initiate a multifaceted reliability analysis, which rates the current article from the following standpoints:
+    \begin{enumerate}
+      \item the biased/deceptive character of the language used in the content of the article, predicted by one of the machine learning algorithms implemented for content-based fake news detection
+      \item the deceptive/sensationalist character of the language used in the headline of the article, predicted by one of the machine learning algorithm implemented for title-based clickbait detection
+      \item the reliability of the source based upon the list of reliable / perennial sources web-scraped from Wikipedia \cite{wiki_reliable_sources}
+      \item the reliability of the source based upon previous user feedback
+      \item the credibility of the authors based upon previous user feedback
+    \end{enumerate}
+    \item after the completion of the analysis, the users have the ability to provide their own rating / feedback for the article
+  \end{enumerate}
+
+\subsection{Architecture and Technologies}
+
+\begin{figure}[h]
+  \centering
+  \fbox{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/app-architecture.png}}
+  \caption{Diagram depicting the architecture of the application.}
+  \label{fig:mesh1}
+\end{figure}
+
+
+
+\subsubsection{Database}
+
+  
+\subsubsection{Front-end}
+  * chrome extension
+  * React
+  * state management (why I tried with redux, but just used chrome.storage.local instead)
+  * talk about what chrome extesion APIs I used
+  * explain what is a service worker
+  * explain what is a popup.js
+  * explain using react hooks, components
+  * some npm packages I used
+
+  The \textbf{client-side} (\textbf{front-end}) of the application was built as a Chrome Extension, so that all the fake news detection and reliability analysis functionalities are immediately accessible upon opening a given news article on the browser. Compared to a standard web front-end application, a Chrome extension (and browser extensions in general) have a more peculiar architecture. 
+
+  Chrome extensions have three main components:
+  \begin{enumerate}
+    \item \textbf{Service Worker}, a JavaScript script running in the background of the browser, reacting to events emitted from the browser, such as tabs/windows being open/closed, refreshing the webpage, modifying the URL from a tab etc. Compared to popup and content scripts, the lifecycle of the service worker is not dependent of any webpage. Therefore, the service worker can be running across webpages, terminate only after becoming idle and restart only when needed (i.e. when having to handle an event from the browser). Service workers are also useful if one wants to store a temporary local state shared across tabs or run an action in the background which should not run only while the popup of the extension is open.
+    \item \textbf{Popup}, the user interface of the chrome extension, which gets toggled when clicking on the icon of the extension located on the taskbar. By means of HTML, CSS and JavaScript, an interface comparable to an ordinary webpage can be written, with certain implicit limitations, such as lack of routing, cannot use standard Redux for state management etc. The lifecycle of the popup lasts only while the popup is open, so if one wants to preserve state between popup sessions, one should either choose to store state in the background script, localStorage or Chrome's Sync or Local Storage.
+    \item \textbf{Content Script}, JavaScript scripts running in the context of webpages. They are useful when it comes to reading or modifying the Document Object Model (DOM) of the webpage. Even though they can perform changes to the HTML and CSS source code of the webpage, they are unable to interact with the JavaScript of the webpage (i.e. access and use functions or variables defined in the context of the web page or extension). Also, they cannot access the Chrome APIs and events. Despite having these limitations, which many have as workaround to communicate via a messages protocol with parent extension, content scripts are useful in many scenarios.
+  \end{enumerate}
+
+  The popup of the news reliability extension was written using the JavaScript library called React, which provides a more efficient development environment and functionalities for writing component-based web interfaces. With the help of components, 
+
+\subsubsection{Back-end}
+  * I have 2 servers: Python (w/ Flask) and Node.js (w/ Express)
+  * What my Python server does
+  * What my Node.js server does
+  * Why I decided to split into two servers 
+  * Talk about design architectures, OOP etc.
+  * Talk about the ai models, training (briefly, as I am going to develop on this further when talking about the algorithm)
+  * some dependcies / packages I used (sklearn, panda, newspaper, chirio)
+\subsubsection{Other tools}
+  * git and Github for source control
+  * Insomnia as API client
+  * Adobe XD for UI / UX
+  * Notion for task management
+
+\subsection{Analysis standpoints}
+\subsubsection{Article content-based detection}
+\subsubsection{Heading clickbaitness}
+\subsubsection{Source reliability}
+\subsubsection{Crowdsourcing / User Feedback}

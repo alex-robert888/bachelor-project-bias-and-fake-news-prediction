@@ -1,12 +1,27 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{}%
-\contentsline {section}{\numberline {2}Theoretical Background}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Fundamentals of Deep Learning}{3}{}%
-\contentsline {subsubsection}{\numberline {2.1.1}Introduction}{3}{}%
-\contentsline {subsubsection}{\numberline {2.1.2}More on Deep Learning}{5}{}%
-\contentsline {subsubsection}{\numberline {2.1.3}More on Natural Language Processing}{5}{}%
-\contentsline {subsection}{\numberline {2.2}Fake News}{5}{}%
-\contentsline {subsection}{\numberline {2.3}Fake News Detection}{6}{}%
-\contentsline {subsection}{\numberline {2.4}Related Work}{6}{}%
-\contentsline {section}{\numberline {3}Application Development}{7}{}%
-\contentsline {section}{\numberline {4}Conclusion}{7}{}%
-\contentsline {section}{\numberline {5}References}{8}{}%
+\contentsline {section}{\numberline {2}Core Concepts of Machine Learning \& Natural Language Processing}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Introduction}{3}{}%
+\contentsline {subsection}{\numberline {2.2}More on Machine Learning}{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Core Concepts of Supervised Learning}{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}K-nearest Neighbors}{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Decision Tree}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Logistic Regression}{10}{}%
+\contentsline {subsubsection}{\numberline {2.2.5}Support Vector Machine}{10}{}%
+\contentsline {subsection}{\numberline {2.3}More on Natural Language Processing}{11}{}%
+\contentsline {subsection}{\numberline {2.4}Fake News}{11}{}%
+\contentsline {subsection}{\numberline {2.5}Fake News Detection}{12}{}%
+\contentsline {subsection}{\numberline {2.6}Related Work}{12}{}%
+\contentsline {section}{\numberline {3}Application Development}{13}{}%
+\contentsline {subsection}{\numberline {3.1}Functionalities}{13}{}%
+\contentsline {subsection}{\numberline {3.2}Architecture and Technologies}{14}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Database}{14}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Front-end}{14}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Back-end}{15}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Other tools}{15}{}%
+\contentsline {subsection}{\numberline {3.3}Analysis standpoints}{16}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Article content-based detection}{16}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Heading clickbaitness}{16}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Source reliability}{16}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Crowdsourcing / User Feedback}{16}{}%
+\contentsline {section}{\numberline {4}Conclusion and Future Work}{16}{}%
+\contentsline {section}{\numberline {5}References}{17}{}%

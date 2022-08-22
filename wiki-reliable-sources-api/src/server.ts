@@ -1,30 +1,34 @@
 import express, { Express, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import winston from 'winston';
-import sourcesRouter from './sources-router';
+import expressWinston from 'express-winston';
+import sourcesRouter from './routers/sources-router';
+import feedbacksRouter from './routers/feedbacks-router';
 import mongoose from 'mongoose';
 
 
 const app = express();
 app.use(cors());
+app.use(expressWinston.logger({
+  transports: [
+    new winston.transports.Console()
+  ],
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.json()
+  ),
+  meta: false,
+  msg: "HTTP  ",
+  expressFormat: true,
+  colorize: false,
+  ignoreRoute: function (req, res) { return false; }
+}));
+app.use(express.json());
 
 mongoose.connect('mongodb+srv://skoda888:1234@cluster0.dvtoo5l.mongodb.net/WikipediaReliableSources?retryWrites=true&w=majority')
         .then(() => console.log("Successfully connected to the database."))
         .catch((e) => console.log("Failed connecting to the database: ", e));
 
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.json(),
-  defaultMeta: { service: 'user-service' },
-  transports: [
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
-  ],
-});
-
-logger.add(new winston.transports.Console({
-  format: winston.format.simple(),
-}));
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
@@ -32,6 +36,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 })
 
 app.use('/sources', sourcesRouter);
+app.use('/feedbacks', feedbacksRouter);
 
 const PORT = 8080;
 app.listen(PORT, () => {

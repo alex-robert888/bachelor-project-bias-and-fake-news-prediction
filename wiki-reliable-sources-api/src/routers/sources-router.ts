@@ -1,6 +1,6 @@
 import express from 'express';
-import { scrape } from './sources-services';
-import Source from './database/source';
+import { scrape } from '../sources-services';
+import Source from '../database/source';
 
 
 const router = express.Router()

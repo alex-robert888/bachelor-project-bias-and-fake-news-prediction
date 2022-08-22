@@ -41,7 +41,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   if (isAnalysisInProgress) return;
   
   // The source should be present in the database of wiki sources
-  console.log("BACKGROUND API REQUEST");
   const response = await fetch(`http://127.0.0.1:8080/sources?url=${tab.url}`)
   if (response.status != 200) return;
 
@@ -56,7 +55,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   // Add loading animation to icon
   let currentAnimationStep = 0;
   const intervalId = setInterval(async () => {
-    console.log("set image to: ", `logo-loading-step-${currentAnimationStep + 1}.png`);
     chrome.action.setIcon({path: `logo-loading-step-${currentAnimationStep + 1}.png`});
     currentAnimationStep = (currentAnimationStep + 1) % 3;
 
@@ -64,8 +62,19 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     const isAnalysisInProgress = state[stateKey].isAnalysisInProgress;
 
     if (!isAnalysisInProgress) {
-      console.log("Clear interval of ID: ", intervalId);
-      chrome.action.setIcon({path: 'logo-highly-reliable.png'});
+      const totalScore = state[stateKey].analysisTotalScore;
+      if (totalScore <= 20) {
+        chrome.action.setIcon({path: 'logo-highly-unreliable.png'});
+      } else if (totalScore <= 40) {
+        chrome.action.setIcon({path: 'logo-unreliable.png'});
+      } else if (totalScore <= 60) {
+        chrome.action.setIcon({path: 'logo-fairly-unreliable.png'});
+      } else if (totalScore <= 80) {
+        chrome.action.setIcon({path: 'logo-reliable.png'});
+      } else {
+        chrome.action.setIcon({path: 'logo-highly-reliable.png'});
+      }
+
       clearInterval(intervalId);
     }
   }, 1000);

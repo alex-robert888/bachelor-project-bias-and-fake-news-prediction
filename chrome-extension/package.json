@@ -12,6 +12,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "axios": "^0.27.2",
+    "draft-js": "^0.11.7",
     "newspaperjs": "^1.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -53,6 +54,7 @@
   },
   "devDependencies": {
     "@types/chrome": "0.0.193",
+    "@types/draft-js": "^0.11.9",
     "@types/react-scroll": "^1.8.3",
     "autoprefixer": "^10.4.7",
     "npm-watch": "^0.11.0",

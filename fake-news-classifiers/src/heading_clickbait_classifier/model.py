@@ -7,6 +7,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_predict
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.calibration import CalibratedClassifierCV, calibration_curve
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 
 class Model(object):
@@ -21,8 +23,8 @@ class Model(object):
         self._loaded_transformer = None
 
         self._train_data, self._test_data = self._dataset.load()
-        # self._feature_extraction_algorithm = feature_extraction_algorithm_type(self._train_data, self._test_data)
-        # self._train_data, self._test_data = self._feature_extraction_algorithm.call()
+        self._feature_extraction_algorithm = feature_extraction_algorithm_type(self._train_data, self._test_data)
+        self._train_data, self._test_data = self._feature_extraction_algorithm.call()
 
     def train(self) -> None:
         """ Train and save the machine learning model """

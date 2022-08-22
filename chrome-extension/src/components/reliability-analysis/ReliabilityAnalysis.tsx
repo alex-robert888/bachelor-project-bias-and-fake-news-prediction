@@ -14,7 +14,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
   }
 
 	return (
-    <section className="mt-10">
+    <section className="mt-4">
       {/* Reliability score top section */}
       <div id="reliability-analysis-header" className="flex flex-row items-center">
         <h1 className="text-2xl mr-3 font-bold">Reliability Score:</h1>

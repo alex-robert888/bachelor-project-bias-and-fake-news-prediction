@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{a5}
 Matthew Helm, Andrew Swiergosz, Heather Haeberle, Jaret Karnuta, Jonathan
@@ -18,15 +18,18 @@ Tom~M. Mitchell.
 \newblock {\em Machine Learning}.
 \newblock McGraw-Hill, New York, 1997.
 
-\bibitem{a7}
-Li~Deng and Dong Yu.
-\newblock Deep learning: Methods and applications.
-\newblock {\em Found. Trends Signal Process.}, 7(3–4):197–387, jun 2014.
-
 \bibitem{a8}
 Elizabeth~D. Liddy.
 \newblock Natural language processing.
 \newblock 2001.
+
+\bibitem{log_reg}
+Jason Brownlee.
+\newblock A gentle introduction to logistic regression with maximum likelihood
+  estimation.
+\newblock
+  \url{https://machinelearningmastery.com/logistic-regression-with-maximum-likelihood-estimation/}.
+\newblock Accessed: 2022-08-20.
 
 \bibitem{a4}
 Posetti J. and Matthews A.
@@ -38,6 +41,12 @@ Kai Shu, Amy Sliva, Suhang Wang, Jiliang Tang, and Huan Liu.
 \newblock Fake news detection on social media: A data mining perspective.
 \newblock 2017.
 
+\bibitem{wiki_reliable_sources}
+Wikipedia:reliable sources/perennial sources.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources}.
+\newblock Accessed: 2022-08-20.
+
 \bibitem{a1}
 Ahmed H, Traore I, and Saad S.
 \newblock Detecting opinion spams and fake news using text classification.
@@ -48,5 +57,15 @@ Choudhary A. and Arora A.
 \newblock Linguistic feature based learning model for fake news detection and
   classification.
 \newblock {\em Expert Systems with Applications}, 2020.
+
+\bibitem{a7}
+Li~Deng and Dong Yu.
+\newblock Deep learning: Methods and applications.
+\newblock {\em Found. Trends Signal Process.}, 7(3–4):197–387, jun 2014.
+
+\bibitem{nash51}
+John Nash.
+\newblock Non-cooperative games.
+\newblock {\em Annals of Mathematics}, 54(2):286--295, 1951.
 
 \end{thebibliography}

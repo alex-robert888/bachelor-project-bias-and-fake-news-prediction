@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.10)  21 MAY 2022 23:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.10)  21 AUG 2022 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -61,32 +61,39 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 \c@definition=\count193
-LaTeX Font Info:    Trying to load font information for T1+qtm on input line 13.
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 14.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/tex-gyre/t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count194
 \l__pdf_internal_box=\box50
-) (./thesis.aux)
+) (./thesis.aux
+
+LaTeX Warning: Label `fig:mesh1' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count195
@@ -102,7 +109,25 @@ LaTeX Font Info:    ... okay on input line 13.
 \everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (./sections/titlepages.tex
@@ -128,41 +153,102 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [1] [2]
-Overfull \hbox (1.46513pt too wide) in paragraph at lines 34--35
-[]\T1/qtm/m/it/12 Artificial in-tel-li-gence (AI) is a branch of com-puter sci-ence, con-cerned
- []
-
-[3] [4]
-<images/ai-dl-ml-nlp-diagram.png, id=24, 1076.02pt x 643.40375pt>
+ [1] [2] (./sections/ml-and-nlp.tex [3]
+<images/ai-dl-ml-nlp-diagram.png, id=21, 1076.02pt x 643.40375pt>
 File: images/ai-dl-ml-nlp-diagram.png Graphic file (type png)
 <use images/ai-dl-ml-nlp-diagram.png>
-Package pdftex.def Info: images/ai-dl-ml-nlp-diagram.png  used on input line 57.
+Package pdftex.def Info: images/ai-dl-ml-nlp-diagram.png  used on input line 35.
 (pdftex.def)             Requested size: 389.99391pt x 233.19597pt.
 
-Overfull \hbox (17.61873pt too wide) in paragraph at lines 57--58
+Overfull \hbox (24.41872pt too wide) in paragraph at lines 35--36
 [][] 
  []
 
-[5 <./images/ai-dl-ml-nlp-diagram.png>] [6] [7] (./thesis.bbl
-Underfull \hbox (badness 3343) in paragraph at lines 4--9
+[4] [5 <./images/ai-dl-ml-nlp-diagram.png>] [6] [7]
+<images/knn.jpeg, id=37, 1606.0pt x 803.0pt>
+File: images/knn.jpeg Graphic file (type jpg)
+<use images/knn.jpeg>
+Package pdftex.def Info: images/knn.jpeg  used on input line 70.
+(pdftex.def)             Requested size: 390.00592pt x 195.00294pt.
+
+Overfull \hbox (6.80591pt too wide) in paragraph at lines 70--71
+ [][] 
+ []
+
+[8 <./images/knn.jpeg>] [9]
+<images/lr-sigmoid.jpeg, id=44, 1572.87625pt x 1606.0pt>
+File: images/lr-sigmoid.jpeg Graphic file (type jpg)
+<use images/lr-sigmoid.jpeg>
+Package pdftex.def Info: images/lr-sigmoid.jpeg  used on input line 109.
+(pdftex.def)             Requested size: 390.00208pt x 398.21527pt.
+
+Overfull \hbox (6.80206pt too wide) in paragraph at lines 109--110
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]) [11] [12] (./sections/application-development.tex
+Overfull \hbox (5.87996pt too wide) in paragraph at lines 5--6
+\T1/qtm/m/n/12 The ap-pli-ca-tion de-vel-oped for this the-sis is a web ex-ten-sion built for Google Chrome,
+ []
+
+<images/app-architecture.png, id=55, 844.15375pt x 527.9725pt>
+File: images/app-architecture.png Graphic file (type png)
+<use images/app-architecture.png>
+Package pdftex.def Info: images/app-architecture.png  used on input line 25.
+(pdftex.def)             Requested size: 390.0028pt x 243.92566pt.
+
+Overfull \hbox (6.8028pt too wide) in paragraph at lines 25--26
+ [][] 
+ []
+
+[13]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (6.05383pt too wide) in paragraph at lines 49--50
+[]\T1/qtm/b/n/12 Service Worker\T1/qtm/m/n/12 , a JavaScript script run-ning in the back-ground of the browser,
+ []
+
+[14]) [15] [16] (./thesis.bbl
+Underfull \hbox (badness 1975) in paragraph at lines 4--9
 []\T1/qtm/m/n/12 Matthew Helm, An-drew Swier-gosz, Heather Hae-berle, Jaret Kar-nuta,
  []
 
-) [8] (./thesis.aux) ) 
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 31.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 27--33
+\T1/cmtt/m/n/12 logistic -[] regression -[] with -[] maximum -[] likelihood -[] estimation/$\T1/qtm/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 45--49
+\T1/cmtt/m/n/12 org / wiki / Wikipedia : Reliable _ sources / Perennial _ sources$\T1/qtm/m/n/12 .  Ac-
+ []
+
+[17]) [18] [19 <./images/lr-sigmoid.jpeg>] [20 <./images/app-architecture.png>] (./thesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2216 strings out of 478268
- 36369 string characters out of 5846347
- 326253 words of memory out of 5000000
- 20411 multiletter control sequences out of 15000+600000
- 507692 words of font info for 61 fonts, out of 8000000 for 9000
+ 2587 strings out of 478268
+ 44492 string characters out of 5846347
+ 332246 words of memory out of 5000000
+ 20743 multiletter control sequences out of 15000+600000
+ 508005 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,715b,279s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb>
-Output written on thesis.pdf (10 pages, 157956 bytes).
+ 60i,7n,67p,999b,322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on thesis.pdf (22 pages, 430623 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
