@@ -13,7 +13,6 @@ from newspaper import Article
 app = Flask(__name__)
 CORS(app)
 
-
 @app.route("/svm")
 def svm():
     content = request.args.get('content')

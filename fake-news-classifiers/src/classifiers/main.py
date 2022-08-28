@@ -6,8 +6,9 @@ if __name__ == "__main__":
     dataset = Dataset()
     model = Model(
         dataset,
-        "../../saved-models/svm-tf-idf-model.sav",
-        "../../saved-models/tf-idf-vectorizer.sav",
+        "../../saved-models/2-knn-tf-idf-model.sav",
+        "../../saved-models/2-knn-tf-idf-vectorizer.sav",
         TfIdfFeatureExtraction
     )
-    x = model.plot_predictited_probabilities()
+    model.train()
+    model.validate()

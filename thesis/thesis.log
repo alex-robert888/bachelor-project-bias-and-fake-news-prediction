@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.10)  21 AUG 2022 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.10)  27 AUG 2022 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -64,36 +64,39 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/abstract/abstract.sty
+Package: abstract 2009/06/08 v1.2a configurable abstracts
+\abstitleskip=\skip49
+\absleftindent=\skip50
+\absrightindent=\skip51
+\absparindent=\skip52
+\absparsep=\skip53
 )
 \c@definition=\count193
-LaTeX Font Info:    Trying to load font information for T1+qtm on input line 14.
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 17.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/tex-gyre/t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count194
 \l__pdf_internal_box=\box50
-) (./thesis.aux
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-)
+) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count195
@@ -109,25 +112,7 @@ LaTeX Font Info:    ... okay on input line 14.
 \everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (./sections/titlepages.tex
@@ -149,106 +134,236 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 17.
  [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1]) (./thesis.toc)
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1]) [1] (./thesis.toc)
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [1] [2] (./sections/ml-and-nlp.tex [3]
-<images/ai-dl-ml-nlp-diagram.png, id=21, 1076.02pt x 643.40375pt>
+ [2] [3] [4] (./sections/ml-and-nlp.tex [5]
+<images/ai-dl-ml-nlp-diagram.png, id=28, 1076.02pt x 643.40375pt>
 File: images/ai-dl-ml-nlp-diagram.png Graphic file (type png)
 <use images/ai-dl-ml-nlp-diagram.png>
-Package pdftex.def Info: images/ai-dl-ml-nlp-diagram.png  used on input line 35.
-(pdftex.def)             Requested size: 389.99391pt x 233.19597pt.
-
-Overfull \hbox (24.41872pt too wide) in paragraph at lines 35--36
-[][] 
- []
-
-[4] [5 <./images/ai-dl-ml-nlp-diagram.png>] [6] [7]
-<images/knn.jpeg, id=37, 1606.0pt x 803.0pt>
-File: images/knn.jpeg Graphic file (type jpg)
-<use images/knn.jpeg>
-Package pdftex.def Info: images/knn.jpeg  used on input line 70.
-(pdftex.def)             Requested size: 390.00592pt x 195.00294pt.
-
-Overfull \hbox (6.80591pt too wide) in paragraph at lines 70--71
- [][] 
- []
-
-[8 <./images/knn.jpeg>] [9]
-<images/lr-sigmoid.jpeg, id=44, 1572.87625pt x 1606.0pt>
-File: images/lr-sigmoid.jpeg Graphic file (type jpg)
-<use images/lr-sigmoid.jpeg>
-Package pdftex.def Info: images/lr-sigmoid.jpeg  used on input line 109.
-(pdftex.def)             Requested size: 390.00208pt x 398.21527pt.
-
-Overfull \hbox (6.80206pt too wide) in paragraph at lines 109--110
- [][] 
- []
+Package pdftex.def Info: images/ai-dl-ml-nlp-diagram.png  used on input line 38.
+(pdftex.def)             Requested size: 350.99762pt x 209.87932pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10]) [11] [12] (./sections/application-development.tex
+[6] [7 <./images/ai-dl-ml-nlp-diagram.png>] [8]
+<images/knn.jpeg, id=40, 1606.0pt x 803.0pt>
+File: images/knn.jpeg Graphic file (type jpg)
+<use images/knn.jpeg>
+Package pdftex.def Info: images/knn.jpeg  used on input line 75.
+(pdftex.def)             Requested size: 350.99307pt x 175.49654pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9] [10 <./images/knn.jpeg>]
+<images/decision-tree.jpeg, id=47, 1606.0pt x 1606.0pt>
+File: images/decision-tree.jpeg Graphic file (type jpg)
+<use images/decision-tree.jpeg>
+Package pdftex.def Info: images/decision-tree.jpeg  used on input line 102.
+(pdftex.def)             Requested size: 312.00119pt x 312.00473pt.
+ [11 <./images/decision-tree.jpeg>]
+<images/lr-sigmoid.jpeg, id=52, 1572.87625pt x 1606.0pt>
+File: images/lr-sigmoid.jpeg Graphic file (type jpg)
+<use images/lr-sigmoid.jpeg>
+Package pdftex.def Info: images/lr-sigmoid.jpeg  used on input line 119.
+(pdftex.def)             Requested size: 272.99881pt x 278.75069pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12] [13 <./images/lr-sigmoid.jpeg>]
+<images/svm-hyperplane.jpeg, id=59, 1606.0pt x 1603.9925pt>
+File: images/svm-hyperplane.jpeg Graphic file (type jpg)
+<use images/svm-hyperplane.jpeg>
+Package pdftex.def Info: images/svm-hyperplane.jpeg  used on input line 132.
+(pdftex.def)             Requested size: 312.00119pt x 311.61472pt.
+<images/svm.jpeg, id=60, 1606.0pt x 1606.0pt>
+File: images/svm.jpeg Graphic file (type jpg)
+<use images/svm.jpeg>
+Package pdftex.def Info: images/svm.jpeg  used on input line 140.
+(pdftex.def)             Requested size: 272.99881pt x 272.99188pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [14 <./images/svm-hyperplane.jpeg>] (./sections/application-development.tex
 Overfull \hbox (5.87996pt too wide) in paragraph at lines 5--6
 \T1/qtm/m/n/12 The ap-pli-ca-tion de-vel-oped for this the-sis is a web ex-ten-sion built for Google Chrome,
  []
 
-<images/app-architecture.png, id=55, 844.15375pt x 527.9725pt>
+[15 <./images/svm.jpeg>]
+<images/app-architecture.png, id=67, 844.15375pt x 527.9725pt>
 File: images/app-architecture.png Graphic file (type png)
 <use images/app-architecture.png>
 Package pdftex.def Info: images/app-architecture.png  used on input line 25.
-(pdftex.def)             Requested size: 390.0028pt x 243.92566pt.
+(pdftex.def)             Requested size: 312.00119pt x 195.14536pt.
 
-Overfull \hbox (6.8028pt too wide) in paragraph at lines 25--26
- [][] 
- []
-
-[13]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (6.05383pt too wide) in paragraph at lines 49--50
+Overfull \hbox (6.05383pt too wide) in paragraph at lines 34--35
 []\T1/qtm/b/n/12 Service Worker\T1/qtm/m/n/12 , a JavaScript script run-ning in the back-ground of the browser,
  []
 
-[14]) [15] [16] (./thesis.bbl
-Underfull \hbox (badness 1975) in paragraph at lines 4--9
+[16] [17 <./images/app-architecture.png>]
+Overfull \hbox (9.59099pt too wide) in paragraph at lines 41--42
+[]\T1/qtm/m/n/12 As for the pro-gram-ming lan-guage, I used Type-Script in-stead of sim-ple JavaScript.
+ []
+
+<images/react-components.jpeg, id=76, 1606.0pt x 1146.2825pt>
+File: images/react-components.jpeg Graphic file (type jpg)
+<use images/react-components.jpeg>
+Package pdftex.def Info: images/react-components.jpeg  used on input line 47.
+(pdftex.def)             Requested size: 312.00119pt x 222.69337pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18]
+<images/design-mockup.png, id=80, 762.85pt x 392.46625pt>
+File: images/design-mockup.png Graphic file (type png)
+<use images/design-mockup.png>
+Package pdftex.def Info: images/design-mockup.png  used on input line 60.
+(pdftex.def)             Requested size: 312.00119pt x 160.51695pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19 <./images/react-components.jpeg>] [20 <./images/design-mockup.png>] [21]
+Overfull \hbox (10.21503pt too wide) in paragraph at lines 90--91
+[]\T1/qtm/m/n/12 To en-sure the porta-bil-ity of the ap-pli-ca-tion, I de-cided upon de-ploy-ing the database
+ []
+
+[22] [23]
+<images/notion.png, id=98, 1731.46875pt x 828.09375pt>
+File: images/notion.png Graphic file (type png)
+<use images/notion.png>
+Package pdftex.def Info: images/notion.png  used on input line 111.
+(pdftex.def)             Requested size: 312.00119pt x 149.2147pt.
+<images/ml-schema.png, id=99, 483.8075pt x 237.88875pt>
+File: images/ml-schema.png Graphic file (type png)
+<use images/ml-schema.png>
+Package pdftex.def Info: images/ml-schema.png  used on input line 120.
+(pdftex.def)             Requested size: 312.00119pt x 153.41708pt.
+ [24 <./images/notion.png> <./images/ml-schema.png>] [25] [26] [27]
+<images/tf-idf.png, id=114, 641.39626pt x 388.45125pt>
+File: images/tf-idf.png Graphic file (type png)
+<use images/tf-idf.png>
+Package pdftex.def Info: images/tf-idf.png  used on input line 156.
+(pdftex.def)             Requested size: 312.00119pt x 188.96172pt.
+ [28 <./images/tf-idf.png>]
+<images/confusion-matrix.jpeg, id=119, 1559.8275pt x 1560.83125pt>
+File: images/confusion-matrix.jpeg Graphic file (type jpg)
+<use images/confusion-matrix.jpeg>
+Package pdftex.def Info: images/confusion-matrix.jpeg  used on input line 177.
+(pdftex.def)             Requested size: 234.00238pt x 234.1384pt.
+ [29 <./images/confusion-matrix.jpeg>]
+<images/metrics-formulas.jpeg, id=124, 1606.0pt x 1604.99625pt>
+File: images/metrics-formulas.jpeg Graphic file (type jpg)
+<use images/metrics-formulas.jpeg>
+Package pdftex.def Info: images/metrics-formulas.jpeg  used on input line 193.
+(pdftex.def)             Requested size: 234.00238pt x 233.85728pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/content-metrics.png, id=125, 561.09625pt x 147.55125pt>
+File: images/content-metrics.png Graphic file (type png)
+<use images/content-metrics.png>
+Package pdftex.def Info: images/content-metrics.png  used on input line 199.
+(pdftex.def)             Requested size: 350.99762pt x 92.30034pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/headline-results.png, id=126, 560.0925pt x 144.54pt>
+File: images/headline-results.png Graphic file (type png)
+<use images/headline-results.png>
+Package pdftex.def Info: images/headline-results.png  used on input line 207.
+(pdftex.def)             Requested size: 350.99762pt x 90.58427pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30]
+Overfull \hbox (1.15068pt too wide) in paragraph at lines 219--220
+[]\T1/qtm/m/n/12 "Deprecated" and "Black-listed" news sources that are dep-re-cated or not avail-
+ []
+
+[31 <./images/metrics-formulas.jpeg>] [32 <./images/content-metrics.png> <./images/headline-results.png>]
+<images/mongo-sources.png, id=138, 569.12625pt x 119.44624pt>
+File: images/mongo-sources.png Graphic file (type png)
+<use images/mongo-sources.png>
+Package pdftex.def Info: images/mongo-sources.png  used on input line 230.
+(pdftex.def)             Requested size: 350.99762pt x 73.6695pt.
+ [33 <./images/mongo-sources.png>]
+<images/user-feedack-form.png, id=143, 702.625pt x 395.4775pt>
+File: images/user-feedack-form.png Graphic file (type png)
+<use images/user-feedack-form.png>
+Package pdftex.def Info: images/user-feedack-form.png  used on input line 246.
+(pdftex.def)             Requested size: 350.99762pt x 197.56929pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [34] [35 <./images/user-feedack-form.png>] [36] (./thesis.bbl
+Underfull \hbox (badness 1975) in paragraph at lines 20--25
 []\T1/qtm/m/n/12 Matthew Helm, An-drew Swier-gosz, Heather Hae-berle, Jaret Kar-nuta,
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 31.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 47.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 27--33
+Underfull \hbox (badness 10000) in paragraph at lines 43--49
 \T1/cmtt/m/n/12 logistic -[] regression -[] with -[] maximum -[] likelihood -[] estimation/$\T1/qtm/m/n/12 .
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 45--49
+Underfull \hbox (badness 1057) in paragraph at lines 51--55
 \T1/cmtt/m/n/12 org / wiki / Wikipedia : Reliable _ sources / Perennial _ sources$\T1/qtm/m/n/12 .  Ac-
  []
 
-[17]) [18] [19 <./images/lr-sigmoid.jpeg>] [20 <./images/app-architecture.png>] (./thesis.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 2165) in paragraph at lines 64--68
+[]\T1/qtm/m/n/12 Fake and real news dataset.  $\T1/cmtt/m/n/12 https : / / www . kaggle . com / datasets /
+ []
 
- ) 
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 75--79
+\T1/cmtt/m/n/12 data -[] leaks -[] 100 -[] acc -[] 1 -[] word -[] 99 -[] 6 -[] acc # Other -[] features -[] and -[]
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 86--91
+[]\T1/qtm/m/n/12 2019/grants/sourceror: The wikipedia com-mu-nity's plat-form against
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 86--91
+\T1/qtm/m/n/12 dis-in-for-ma-tion.  $\T1/cmtt/m/n/12 https : / / wikiconference . org / wiki / 2019 / Grants /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--91
+\T1/cmtt/m/n/12 Sourceror : _The _ Wikipedia _ community % 27s _ platform _ against _
+ []
+
+) [38] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 2587 strings out of 478268
- 44492 string characters out of 5846347
- 332246 words of memory out of 5000000
- 20743 multiletter control sequences out of 15000+600000
- 508005 words of font info for 62 fonts, out of 8000000 for 9000
+ 2535 strings out of 478268
+ 43283 string characters out of 5846347
+ 329418 words of memory out of 5000000
+ 20694 multiletter control sequences out of 15000+600000
+ 513704 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,67p,999b,322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,7n,62p,1304b,329s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on thesis.pdf (22 pages, 430623 bytes).
+Output written on thesis.pdf (40 pages, 1851538 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 186 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

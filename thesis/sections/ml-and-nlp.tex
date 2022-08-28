@@ -1,4 +1,4 @@
-\section{Core Concepts of Machine Learning \& Natural Language Processing}
+\section{Core Concepts of Machine Learning}
 Machine learning and natural language processing are important components laying at the foundation of this thesis. Therefore, the current chapter provides an overview of some of the relevant fundamental concepts, required for understanding the thesis further on.
 
 \subsection{Introduction}
@@ -32,7 +32,12 @@ Out of these, natural language processing has probably the most applications in 
   Natural language processing (NLP) is a field of study at the intersection of artificial intelligence and linguistics, which is comprised of a range of computational techniques for analyzing and representing human language \cite{a8}.
 \end{definition}
 
-\fbox{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/ai-dl-ml-nlp-diagram.png}}
+
+\begin{figure}[h]
+  \centering
+  \fbox{\includegraphics[width=0.9\textwidth,keepaspectratio]{images/ai-dl-ml-nlp-diagram.png}}
+  \caption{Relation between NLP and Machine Learning.}
+\end{figure}
 
 \subsection{More on Machine Learning}
 \subsubsection{Core Concepts of Supervised Learning}
@@ -67,9 +72,8 @@ The KNN algorithm can be outlined by the following steps which are iteratively p
 
 \begin{figure}[h]
   \centering
-  \fbox{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/knn.jpeg}}
+  \fbox{\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{images/knn.jpeg}}
   \caption{KNN algorithm selecting the K nearest neighbors.}
-  \label{fig:mesh1}
 \end{figure}
 
 The \textbf{advantages} of KNN is that it is relatively simple to implement, can learn non-linear decision boundaries, no training time, new data can be added anytime without a negative effect on the accuracy and there is only one hyperparameter to handle (i.e. k). As of \textbf{disadvantages}, does not work very efficiently on large datasets and it is sensitive to noisy data.
@@ -93,6 +97,12 @@ A decision tree can be decomposed in the following steps:
   \item Stop the recursivity as soon as the nodes cannot be classified further anymore and regard the final nodes as leaves.
 \end{enumerate}
 
+\begin{figure}[h]
+  \centering
+  \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/decision-tree.jpeg}}
+  \caption{Small example of decision tree.}
+\end{figure}
+
 The pruning process mentioned above can be done in two ways: post-pruning (i.e. execute the pruning after the construction of the decision tree is completed, technique particularly used when the depth of the tree is large and shows signs of overfitting) or pre-prunning (i.e. execute the prunning some time before the completion of the decision tree, technique useful to prevent overfitting).
 
 On the one hand, the upsides of decision tree include: less data preparation is needed (not critical to standardize and normalize the data), data scaling is not required and it has the ability to capture non-linear relationships. On the other hand, the downsides are that decision tree generally require more computational resources and execution time
@@ -106,9 +116,8 @@ While in linear regression algorithms, adjusting the linear function is done by 
 
 \begin{figure}[h]
   \centering
-  \fbox{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/lr-sigmoid.jpeg}}
-  \caption{KNN algorithm selecting the K nearest neighbors.}
-  \label{fig:mesh3}
+  \fbox{\includegraphics[width=0.7\textwidth,keepaspectratio]{images/lr-sigmoid.jpeg}}
+  \caption{Logistic regression sigmoid function.}
 \end{figure}
 
 The advantages of this algorithm include: efficient training process, easy and intuitive implementation, ability to easily extend to multiple classes. Conversely, there is also one major disadvantage: the constraint of linear boundaries.
@@ -118,10 +127,16 @@ Support Vector Machine is another popular supervised learning algorithms, that i
 
 From all the possible hyperplanes meeting this requirement, the algorithm has to specifically select that which is furthest from the data points of each category. Maximizing the margin between the hyperplane and the data points results in a more solid decision boundary between the classes, making the predictions more confident and reliable. If the hyperplane is discrepantly closer to the data points of a certain class and further from another class, then the observation located in the close proximity of the hyperplane could be classified in the group which is considerably further from.
 
+\begin{figure}[h]
+  \centering
+  \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/svm-hyperplane.jpeg}}
+  \caption{Hyperplane too close to one of the classes.}
+\end{figure}
+
 The name of "Support Vector Machine" reveals the essential elements that the algorithms is based upon: support vectors (i.e. data points that are closest to the hyperplane and which influence the position and orientation of the hyperplane).
 
-
-\subsection{More on Natural Language Processing}
-Natural Language Processing (often abbreviated as NLP) is a sub-field of computer science, artificial intelligence and linguistics, concerned with tasks involving human language processing. Given that this thesis explores linguistic-based or content-based fake news detection, there are several NLP concepts and core terminology critical for understanding the machine learning algorithms that are to be presented in the following chapters.
-
-Pre-processing is a critical initial step when training an NLP model. The purpose of this general practice is to prepare the dataset for training, by applying a series of operation on text data. 
+\begin{figure}[h]
+  \centering
+  \fbox{\includegraphics[width=0.7\textwidth,keepaspectratio]{images/svm.jpeg}}
+  \caption{Support Vector Machine optimal hyperplane.}
+\end{figure}

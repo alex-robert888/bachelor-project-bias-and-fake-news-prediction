@@ -52,7 +52,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
         
         <li>
           <ReliabilityAnalysisCard 
-            title="URL Reliability" 
+            title="Source Reliability by Crowdsourcing" 
             percentage={getPercentageTagValue(chromeStorageLocalState.analysisItems.urlReliability.score)}
           >
             <></>
@@ -61,7 +61,7 @@ const ReliabilityAnalysis: React.FC<{}> = ({}) => {
 
         <li>
           <ReliabilityAnalysisCard 
-            title="Cited Sources" 
+            title="Authors Reliability by Crowdsourcing" 
             percentage={getPercentageTagValue(chromeStorageLocalState.analysisItems.citedSources.score)}
           >
             <></>

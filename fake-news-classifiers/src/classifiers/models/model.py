@@ -7,7 +7,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_val_predict
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.calibration import CalibratedClassifierCV, calibration_curve
-
+from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 class Model(object):
     """ The machine learning model for fake news detection """
@@ -16,7 +18,7 @@ class Model(object):
         self._dataset = dataset
         self._model_save_file_path = model_save_file_path
         self._transformer_save_file_path = transformer_save_file_path
-        self._svm_classifier = SVC(verbose=True, probability=True)
+        self._svm_classifier = DecisionTreeClassifier()
         self._loaded_svm_classifier = None
         self._loaded_transformer = None
 
@@ -26,10 +28,16 @@ class Model(object):
 
     def train(self) -> None:
         """ Train and save the machine learning model """
+        if os.path.exists(self._model_save_file_path):
+            raise ValueError("Model save file path already exists.")
+
+        if os.path.exists(self._transformer_save_file_path):
+            raise ValueError("Transformer save file path already exists.")
+
         self._fit_model()
         self._save_model_to_file()
         self._save_transformer_to_file()
-        self._test_model()
+        # self._test_model()
 
     def predict(self, content: str) -> []:
         self.load()
@@ -42,11 +50,15 @@ class Model(object):
         return self._loaded_svm_classifier.predict_proba(transformed_content)[0]
 
     def validate(self) -> None:
-        self.load()
-        x = self._loaded_transformer.transform(self._test_data.entries)
+        # self.load()
+        x = self._test_data.entries
         y = self._test_data.labels
-        predicted = cross_val_predict(self._loaded_svm_classifier, x, y, cv=2)
-        print("accuracy: ", confusion_matrix(y, predicted))
+        predicted = cross_val_predict(self._svm_classifier, x, y, cv=2)
+        print("confusion_matrix: ", confusion_matrix(y, predicted))
+        print("accuracy: ", accuracy_score(y, predicted))
+        print("precision: ", precision_score(y, predicted, pos_label="1"))
+        print("recall: ", recall_score(y, predicted, pos_label="1"))
+        print("f1_score: ", f1_score(y, predicted, pos_label="1"))
 
     def plot_predictited_probabilities(self) -> None:
         self.load()

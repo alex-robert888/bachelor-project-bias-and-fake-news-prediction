@@ -9,6 +9,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.calibration import CalibratedClassifierCV, calibration_curve
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 
 
 class Model(object):
@@ -18,13 +19,13 @@ class Model(object):
         self._dataset = dataset
         self._model_save_file_path = model_save_file_path
         self._transformer_save_file_path = transformer_save_file_path
-        self._lg_classifier = LogisticRegression()
+        self._lg_classifier = SVC(verbose=1)
         self._loaded_svm_classifier = None
         self._loaded_transformer = None
 
-        self._train_data, self._test_data = self._dataset.load()
-        self._feature_extraction_algorithm = feature_extraction_algorithm_type(self._train_data, self._test_data)
-        self._train_data, self._test_data = self._feature_extraction_algorithm.call()
+        # self._train_data, self._test_data = self._dataset.load()
+        # self._feature_extraction_algorithm = feature_extraction_algorithm_type(self._train_data, self._test_data)
+        # self._train_data, self._test_data = self._feature_extraction_algorithm.call()
 
     def train(self) -> None:
         """ Train and save the machine learning model """
@@ -54,7 +55,11 @@ class Model(object):
         x = self._loaded_transformer.transform(self._test_data.entries)
         y = self._test_data.labels
         predicted = cross_val_predict(self._loaded_svm_classifier, x, y, cv=2)
-        print("accuracy: ", confusion_matrix(y, predicted))
+        print("confusion_matrix: ", confusion_matrix(y, predicted))
+        print("accuracy: ", accuracy_score(y, predicted))
+        print("precision: ", precision_score(y, predicted, pos_label="1"))
+        print("recall: ", recall_score(y, predicted, pos_label="1"))
+        print("f1_score: ", f1_score(y, predicted, pos_label="1"))
 
     def plot_predictited_probabilities(self) -> None:
         self.load()

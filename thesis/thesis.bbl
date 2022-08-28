@@ -1,5 +1,21 @@
 \begin{thebibliography}{10}
 
+\bibitem{a4}
+Posetti J. and Matthews A.
+\newblock A short guide to the history of ’fake news’ and disinformation.
+\newblock 2018.
+
+\bibitem{a2}
+Kai Shu, Amy Sliva, Suhang Wang, Jiliang Tang, and Huan Liu.
+\newblock Fake news detection on social media: A data mining perspective.
+\newblock 2017.
+
+\bibitem{a10}
+Xinyi Zhou and Reza Zafarani.
+\newblock A survey of fake news: Fundamental theories, detection methods, and
+  opportunities.
+\newblock {\em ACM Comput. Surv.}, 53(5), sep 2020.
+
 \bibitem{a5}
 Matthew Helm, Andrew Swiergosz, Heather Haeberle, Jaret Karnuta, Jonathan
   Schaffer, Viktor Krebs, Andrew Spitzer, and Prem Ramkumar.
@@ -31,26 +47,59 @@ Jason Brownlee.
   \url{https://machinelearningmastery.com/logistic-regression-with-maximum-likelihood-estimation/}.
 \newblock Accessed: 2022-08-20.
 
-\bibitem{a4}
-Posetti J. and Matthews A.
-\newblock A short guide to the history of ’fake news’ and disinformation.
-\newblock 2018.
-
-\bibitem{a2}
-Kai Shu, Amy Sliva, Suhang Wang, Jiliang Tang, and Huan Liu.
-\newblock Fake news detection on social media: A data mining perspective.
-\newblock 2017.
-
 \bibitem{wiki_reliable_sources}
 Wikipedia:reliable sources/perennial sources.
 \newblock
   \url{https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources}.
 \newblock Accessed: 2022-08-20.
 
+\bibitem{a9}
+Davide Fucci, Hakan Erdogmus, Burak Turhan, Markku Oivo, and Natalia Juristo.
+\newblock A dissection of the test-driven development process: Does it really
+  matter to test-first or to test-last?
+\newblock {\em IEEE Transactions on Software Engineering}, 43(7):597--614,
+  2017.
+
+\bibitem{dataset_content}
+Fake and real news dataset.
+\newblock
+  \url{https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset}.
+\newblock Accessed: 2022-08-20.
+
 \bibitem{a1}
 Ahmed H, Traore I, and Saad S.
 \newblock Detecting opinion spams and fake news using text classification.
 \newblock {\em Security and Privacy}, 2017.
+
+\bibitem{data_leaks}
+5+ data leaks [100% acc]; 1 word [99.6% acc].
+\newblock
+  \url{https://www.kaggle.com/code/mosewintner/5-data-leaks-100-acc-1-word-99-6-acc#Other-features-and-dead-giveaways}.
+\newblock Accessed: 2022-08-20.
+
+\bibitem{dataset_headline}
+Clickbait dataset.
+\newblock \url{https://www.kaggle.com/datasets/amananandrai/clickbait-dataset}.
+\newblock Accessed: 2022-08-20.
+
+\bibitem{conf_wiki}
+2019/grants/sourceror: The wikipedia community's platform against
+  disinformation.
+\newblock
+  \url{https://wikiconference.org/wiki/2019/Grants/Sourceror:_The_Wikipedia_community%27s_platform_against_disinformation}.
+\newblock Accessed: 2022-08-20.
+
+\bibitem{a11}
+Rami Mohawesh, Shuxiang Xu, Son~N. Tran, Robert Ollington, Matthew Springer,
+  Yaser Jararweh, and Sumbal Maqsood.
+\newblock Fake reviews detection: A survey.
+\newblock {\em IEEE Access}, 9:65771--65802, 2021.
+
+\bibitem{a12}
+Shaohua Jia, Xianguo Zhang, Xinyue Wang, and Yang Liu.
+\newblock Fake reviews detection based on lda.
+\newblock In {\em 2018 4th International Conference on Information Management
+  (ICIM)}, pages 280--283, 2018.
 
 \bibitem{a3}
 Choudhary A. and Arora A.
