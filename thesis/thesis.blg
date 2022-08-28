@@ -6,45 +6,46 @@ Database file #1: sources.bib
 Warning--empty journal in a4
 Warning--empty journal in a2
 Warning--empty journal in a8
-You've used 20 entries,
+Warning--empty booktitle in a14
+You've used 23 entries,
             1791 wiz_defined-function locations,
-            546 strings with 6558 characters,
-and the built_in function-call counts, 3718 in all, are:
-= -- 305
-> -- 178
-< -- 1
-+ -- 69
-- -- 49
-* -- 209
-:= -- 592
-add.period$ -- 61
-call.type$ -- 20
-change.case$ -- 19
+            556 strings with 7311 characters,
+and the built_in function-call counts, 4532 in all, are:
+= -- 374
+> -- 220
+< -- 3
++ -- 84
+- -- 61
+* -- 239
+:= -- 698
+add.period$ -- 71
+call.type$ -- 23
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 162
-empty$ -- 389
-format.name$ -- 49
-if$ -- 834
+cite$ -- 27
+duplicate$ -- 212
+empty$ -- 471
+format.name$ -- 61
+if$ -- 1042
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 15
-newline$ -- 104
-num.names$ -- 15
-pop$ -- 87
+int.to.str$ -- 23
+missing$ -- 17
+newline$ -- 119
+num.names$ -- 17
+pop$ -- 113
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 76
+skip$ -- 113
 stack$ -- 0
-substring$ -- 159
-swap$ -- 27
-text.length$ -- 1
+substring$ -- 175
+swap$ -- 51
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 24
-width$ -- 22
-write$ -- 204
-(There were 3 warnings)
+warning$ -- 4
+while$ -- 28
+width$ -- 25
+write$ -- 235
+(There were 4 warnings)

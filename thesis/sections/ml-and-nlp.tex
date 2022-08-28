@@ -33,7 +33,7 @@ Out of these, natural language processing has probably the most applications in 
 \end{definition}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.9\textwidth,keepaspectratio]{images/ai-dl-ml-nlp-diagram.png}}
   \caption{Relation between NLP and Machine Learning.}
@@ -70,7 +70,7 @@ The KNN algorithm can be outlined by the following steps which are iteratively p
   \item Assign a class label to the current data point according to the majority vote rule: the label that is in the greatest proportion present around the data point, from the k considered closes ones.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{images/knn.jpeg}}
   \caption{KNN algorithm selecting the K nearest neighbors.}
@@ -97,7 +97,7 @@ A decision tree can be decomposed in the following steps:
   \item Stop the recursivity as soon as the nodes cannot be classified further anymore and regard the final nodes as leaves.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/decision-tree.jpeg}}
   \caption{Small example of decision tree.}
@@ -114,7 +114,7 @@ Opposed to the linear regression, where the aim is to find a linear function, lo
 
 While in linear regression algorithms, adjusting the linear function is done by minimizing the sum of the distances between each data point to the line (i.e. the least squares method), in logistic regression the maximum likelihood estimation is used instead. The maximum likelihood estimation method attempts to maximize the conditional probability of observing the data X given a specific probability distribution and its parameters theta \cite{log_reg}.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.7\textwidth,keepaspectratio]{images/lr-sigmoid.jpeg}}
   \caption{Logistic regression sigmoid function.}
@@ -127,7 +127,7 @@ Support Vector Machine is another popular supervised learning algorithms, that i
 
 From all the possible hyperplanes meeting this requirement, the algorithm has to specifically select that which is furthest from the data points of each category. Maximizing the margin between the hyperplane and the data points results in a more solid decision boundary between the classes, making the predictions more confident and reliable. If the hyperplane is discrepantly closer to the data points of a certain class and further from another class, then the observation located in the close proximity of the hyperplane could be classified in the group which is considerably further from.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/svm-hyperplane.jpeg}}
   \caption{Hyperplane too close to one of the classes.}
@@ -135,7 +135,7 @@ From all the possible hyperplanes meeting this requirement, the algorithm has to
 
 The name of "Support Vector Machine" reveals the essential elements that the algorithms is based upon: support vectors (i.e. data points that are closest to the hyperplane and which influence the position and orientation of the hyperplane).
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.7\textwidth,keepaspectratio]{images/svm.jpeg}}
   \caption{Support Vector Machine optimal hyperplane.}

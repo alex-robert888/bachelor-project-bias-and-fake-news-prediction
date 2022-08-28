@@ -7,6 +7,7 @@
 \usepackage[hyphens,spaces]{url}
 
 \usepackage{abstract}
+\usepackage{float}
 % \renewcommand{\abstractnamefont}{\normalfont\Large\bfseries}
 % \renewcommand{\abstracttextfont}{\normalfont\Small}
 
@@ -18,7 +19,7 @@
   \subfile{sections/titlepages}
 
   \begin{abstract}
-    The phenomenon of fake news has been escalating alarmingly in the last few decades, since the outburst of the Internet and social media. The COVID-19 pandemic illustrates perfectly how dangerously and quickly lies, fabricated news, hoaxes and conspiracies can be disseminated at a global level, resulting into mass misinformation, revolt, paranoia and a steep division between people. Given that most people inform themselves about essentially everything through online sources, there is a great need for a collective endeavour to mitigate this issue. In this context, fake news detection has emerged as an increasingly researched field over the last years.
+    The phenomenon of fake news has been escalating alarmingly in the last few decades, since the outburst of the Internet and social media. The COVID-19 pandemic illustrates perfectly how dangerously and quickly lies, fabricated news, hoaxes and conspiracies can be disseminated at a global level, resulting into mass misinformation, revolt, paranoia and a steep division between people. Given that most people inform themselves about essentially everything through online sources, there is a great need for a collective endeavour to mitigate this issue. In this context, fake news detection has emerged as an increasingly researched field over the last decades.
     
     This thesis examines several approaches for evaluating the reliability and deceitfulness of online news articles. Primarily, the methodology includes supervised machine learning algorithms, such as K-Nearest Neighbors, Decision Trees, Logistic Regression and Support Vector Machines, which are leveraged for classifying news articles by veracity, based upon their contents and headlines. The results were satisfactory, the best models achieving over 90\% accuracy scores on the datasets, while also performing promisingly well on real-life inputs. Secondarily, some non-AI methods were also implemented, by means of web-scraping and crowdsourcing All of these news analysis procedures were subsequently brought together under a browser extension, with the final goal of providing users with an accessible tool for evaluating the reliability of any news article.
 
@@ -51,8 +52,26 @@
 
   \subfile{sections/ml-and-nlp}
 
-  \section{Related Work}
+  \newpage
+  \section{Fake News Detection Methods Overview}
+    The last decades marked important advancements in the field of fake news detection. These advancements coincide non only with the exponential rise of fake news owed to the communication and information breakthroughs brought about by the Internet and social media, but also with the remarkable progress recorded in computer science along with artificial intelligence and its subfield of machine learning.
+
+    In the relatively novel literature of fake news detection, the solid prospects of machine learning algorithms are very frequently discussed. There are several manners in which machine learning can be leveraged for the identification of fake news, but most of them revolve around two main categories: news content-based and social context-based fake news detection \cite{a2}. In what follows in this chapter, these two different types of methods will be further detailed.
+
+    On the one hand, news content-based fake news detection incorporates the machine learning approaches which predict the factuality and deceitfulness of news by analyzing the metadata of news article, consisting of the source, headline, body text and images/videos.
+
+    B. Horne and S. Adali et. al \cite{a13} point out that there is often an underlying presumption that the editorial style in which fake news are written are made to be as similar as possible to real news. Nonetheless, this assumption is most of the times inaccurate and as a matter of fact, the body content of the news can be highly evocative in terms of the reliability of the facts presented in the news. An important element making fake news stand out is the persuasion element, which is most of the times achieved through heuristics rather than strong arguments.
+
+    In addition, B. Horne and S. Adali, as well as Y. Chen and J. Conroy et. al \cite{a14} highlight that both the body content as well as the headline are very often characterized by clickbait, which refers to the opinionated and inflammatory language used in order to entice reader to read the full article. Therefore, before even reading the content of the article, the lingustic features of tge headline itself can be exploited straight away to predict the misleading intent of the article, often crafted for political or financial gain.
+
+    Moreover, extracting other linguistic feature from the body of the content, such as number of quotes, the average length of the quotes, number of external links, number of sources cited, number and length of the graphs can also predict how well fact-checked and credible are the information presented \cite{a15}.
     
+    Besides the headline and the content of the news articles, the visual cues have been proven to be a critical element of propagandistic pieces of news. Images can inspire emotions and legitimacy to the stories, in spite of not bringing little to no arguments or evidence \cite{visual_cues}.
+
+    On the other hand, in addition to the content-based algorithms utilizing the metadata of the news articles, there is also some research considering the detection based upon the social context to be even more effective.
+
+    There is some literature exploring user-based approaches, working on the observations that most fake news are spread by non-human social media accounts or also called, bots. Individual-level features are exploited to deduce the overall credibility of the user, by inspecting various demographics of the suspicious accounts, such as registration age, number of followers/followees, number of tweets the user has posted / authored and so forth \cite{a16}. Apart from individual-level features, some group-level approaches can also capture some important characteristics of the environment in which fake news are spread. Group-level properties are based upon the observation that both fake and real news spreaders have the tendency of creating and adhering to social media communities with the same purpose. Consequently, fake news can be detected by following some characteristics of these groups, such as  percentage of verified users, average number of followers or various other statistics that are build by computing the average of individual-level feature of the users comprising the groups.  
+  
   \newpage
 
   \subfile{sections/application-development}

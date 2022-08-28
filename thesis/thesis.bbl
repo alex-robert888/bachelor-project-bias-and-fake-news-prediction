@@ -47,6 +47,36 @@ Jason Brownlee.
   \url{https://machinelearningmastery.com/logistic-regression-with-maximum-likelihood-estimation/}.
 \newblock Accessed: 2022-08-20.
 
+\bibitem{a13}
+Benjamin~D. Horne and Sibel Adali.
+\newblock This just in: Fake news packs a lot in title, uses simpler,
+  repetitive content in text body, more similar to satire than real news.
+\newblock {\em ArXiv}, abs/1703.09398, 2017.
+
+\bibitem{a14}
+Yimin Chen, Nadia Conroy, and Victoria Rubin.
+\newblock Misleading online content: Recognizing clickbait as “false news”.
+\newblock 11 2015.
+
+\bibitem{a15}
+Martin Potthast, Johannes Kiesel, Kevin Reinartz, Janek Bevendorff, and Benno
+  Stein.
+\newblock A stylometric inquiry into hyperpartisan and fake news.
+\newblock In {\em Proceedings of the 56th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}, pages 231--240,
+  Melbourne, Australia, July 2018. Association for Computational Linguistics.
+
+\bibitem{visual_cues}
+How photos fuel the spread of fake news.
+\newblock \url{https://www.wired.com/2016/12/photos-fuel-spread-fake-news/}.
+\newblock Accessed: 2022-08-20.
+
+\bibitem{a16}
+Sejeong Kwon, Meeyoung Cha, Kyomin Jung, Wei Chen, and Yajun Wang.
+\newblock Prominent features of rumor propagation in online social media.
+\newblock In {\em 2013 IEEE 13th International Conference on Data Mining},
+  pages 1103--1108, 2013.
+
 \bibitem{wiki_reliable_sources}
 Wikipedia:reliable sources/perennial sources.
 \newblock
@@ -106,15 +136,5 @@ Choudhary A. and Arora A.
 \newblock Linguistic feature based learning model for fake news detection and
   classification.
 \newblock {\em Expert Systems with Applications}, 2020.
-
-\bibitem{a7}
-Li~Deng and Dong Yu.
-\newblock Deep learning: Methods and applications.
-\newblock {\em Found. Trends Signal Process.}, 7(3–4):197–387, jun 2014.
-
-\bibitem{nash51}
-John Nash.
-\newblock Non-cooperative games.
-\newblock {\em Annals of Mathematics}, 54(2):286--295, 1951.
 
 \end{thebibliography}

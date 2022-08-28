@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex thesis"] 1661621403 "thesis.aux" "thesis.bbl" "thesis" 1661621406
+["bibtex thesis"] 1661678312 "thesis.aux" "thesis.bbl" "thesis" 1661678384
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "sources.bib" 1661616104 6593 a7d75c95ca15ddefa05261f5e8c572a6 ""
-  "thesis.aux" 1661621406 6763 9af6efae7aa7197c7b41d08a3d81a367 "pdflatex"
+  "sources.bib" 1661677909 7614 6eb7e7718c122704228bbc9d625bde90 ""
+  "thesis.aux" 1661678384 6944 20fc91c0b2eddde8a84eda46f70adf92 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
-["pdflatex"] 1661621404 "/Users/robert/Documents/bachelor-project/thesis/thesis.tex" "thesis.pdf" "thesis" 1661621406
-  "/Users/robert/Documents/bachelor-project/thesis/thesis.tex" 1661621400 9483 91d7f88d5d7aca3a99c4de5948b8f993 ""
+["pdflatex"] 1661678382 "/Users/robert/Documents/bachelor-project/thesis/thesis.tex" "thesis.pdf" "thesis" 1661678384
+  "/Users/robert/Documents/bachelor-project/thesis/thesis.tex" 1661678253 13748 e0e54fa6e2f6cfcf86802709daa4f414 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1529098226 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -39,6 +39,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo" 1636758526 8449 bc7344e882df4d7e51c046514dee83e4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd" 1622581934 2443 6dd9a5deeddddfcceb01d1932590ebad ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def" 1601931164 19103 48d29b6e2a64cb717117ef65f107b404 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty" 1622581934 18399 7e40f80366dffb22c0e7b70517db5cb4 ""
@@ -76,13 +77,13 @@
   "images/svm.jpeg" 1661111880 120803 b20f5d696de50fc4265016590dd18bbd ""
   "images/tf-idf.png" 1661587782 168654 20c5322c99f6ff4ec8f6e7364ed2dbdf ""
   "images/user-feedack-form.png" 1661614348 190227 4049b2390b02a59a7e50503eaea81d6e ""
-  "sections/application-development.tex" 1661616205 35718 8090ef8500f76ee14973b2ca438fc350 ""
-  "sections/ml-and-nlp.tex" 1661498465 16377 b4244a75ad713d20993c8451e5f75bf7 ""
+  "sections/application-development.tex" 1661678382 35682 041d6ac2f8e3a2d453ed862a236a5d4f ""
+  "sections/ml-and-nlp.tex" 1661678291 16377 38a02b555a6655214415cc0e96a64e1a ""
   "sections/titlepages.tex" 1661145987 1552 9d86c1da6782aba09a4394c94d71ff4f ""
-  "thesis.aux" 1661621406 6763 9af6efae7aa7197c7b41d08a3d81a367 "pdflatex"
-  "thesis.bbl" 1661621404 4010 f75c6fa4443205f0672f8aecdfaf75b0 "bibtex thesis"
-  "thesis.tex" 1661621400 9483 91d7f88d5d7aca3a99c4de5948b8f993 ""
-  "thesis.toc" 1661621406 2035 7233e95d88d061f8f990c0f75897e345 "pdflatex"
+  "thesis.aux" 1661678384 6944 20fc91c0b2eddde8a84eda46f70adf92 "pdflatex"
+  "thesis.bbl" 1661678312 4949 24b4da1f39b2d1cf9ff22b98fe0920a3 "bibtex thesis"
+  "thesis.tex" 1661678253 13748 e0e54fa6e2f6cfcf86802709daa4f414 ""
+  "thesis.toc" 1661678384 2059 2f893a0529064b42d66dff7c3c7053a9 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.log"

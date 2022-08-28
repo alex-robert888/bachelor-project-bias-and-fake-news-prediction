@@ -20,7 +20,7 @@ This chapter provides a complete rundown on the development process of the fake 
 
 \subsection{Architecture and Technologies}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/app-architecture.png}}
   \caption{Diagram depicting the architecture of the application.}
@@ -42,7 +42,7 @@ This chapter provides a complete rundown on the development process of the fake 
 
   As for the programming paradigm, the code written can be mostly categorized as functional and procedural. Classes were used at minimum, and all the user interface components, service functions, utility functions, React hooks were writing as functions, attempting to respect some of basic functional programming principles: immutable state, no side effects (as much as possible), functions as first-class entities, some use of pure functions and type systems.
 
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centering
     \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/react-components.jpeg}}
     \caption{Component-based structure of the user interface.}
@@ -55,7 +55,7 @@ This chapter provides a complete rundown on the development process of the fake 
 \subsubsection{UI Design}
   Prior to coding the user interface, I followed the good practice of creating design mockups first. Design mockups are of great utility to pre-plan and visualize how the UI elements should be organized in order to not only have a clean and attractive appearance, but to also project and create the best workflow for the application. For this purpose, I made use of Adobe's UI/UX design software called Adobe XD, which was also useful for creating some graphical elements, such as logos, icons and buttons designs.
 
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centering
     \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/design-mockup.png}}
     \caption{Design mockup of some of the pages and graphical elements.}
@@ -106,7 +106,7 @@ For source control management, git was used together with Github. The master bra
 
 For features and bugs management, given that this was an individual project, I decided on employing a simple tool, without too many complex unneeded functionalities. I used Notion, which enables the creation of Kanban boards, frequently used at industrial-level as well. A Kanban board is split into multiple columns, each of them representing different stages of the development of a feature. Feature ideas would be placed into the "Backlog" column, features that are planned to be implemented in the "Approved Backlog" column, features that are currently in progress into the "Working" column, feature which need to be tested and reviewed further in the "Test/Review" column, features that are completed in the "Done" column and various bugs and improvement ideas were placed into the Bugs/Improvements column. In many of the tickets from the board, I added a description and a checklist of tasks that need to be fulfilled to consider the feature implemented and ready to be moved to the "Test/Review" or the "Finished" column.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/notion.png}}
   \caption{Notion Kanban board for features and bugs management.}
@@ -115,7 +115,7 @@ For features and bugs management, given that this was an individual project, I d
 \subsection{Machine Learning Algorithms}
 In this section, an outline of the content-based and headline-based fake news detection algorithms is presented, talking about the dataset selection, data processing, feature extraction, training and results.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/ml-schema.png}}
   \caption{The process of building a classifier.}
@@ -151,7 +151,7 @@ IDF represents the inverse document frequency of the word across the entire set 
 
 Now that both TF and IDF were separately discussed previously, we can finally compute the TF-IDF function. The original purpose of TF-IDF was related to document search and information retrieval. Suppose the query string is "The vaccine". The TF-IDF function will yield a greater score for each document, proportionally to the frequency of each word from the query string found in the documents, assigning higher scores to more rare words like "vaccine" compared to more common words like "the". TF-IDF for a specified word is the product between the TF and the IDF of that word. Below, an example of calculation for TF-IDF is provided.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.8\textwidth,keepaspectratio]{images/tf-idf.png}}
   \caption{Example of calculation of TF-IDF.}
@@ -172,7 +172,7 @@ In this way, we got to employ 20\% of the dataset for testing and 80\% for train
 
 To quantify the performance of the models, the confusion matrix should be build. A Confusion matrix is an N dimensional square matrix used for evaluating the performance of a classification model, where N represents the number of output classes. The matrix performs a comparison of the predicted values and the actual true values. This provides a holistic view of how well a machine learning model performs and what kind of errors were made. 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.6\textwidth,keepaspectratio]{images/confusion-matrix.jpeg}}
   \caption{The elements of a confusion matrix.}
@@ -188,21 +188,19 @@ Four different standard machine learning models were used, all based on the para
   \item \textbf{F1-Score}: leveraging the previously computed recall and precision metrics, computes the harmonic mean of them. The F1 score is less intuitive than accuracy, but many times is of greater utility in determining the performance of the classifier.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.6\textwidth,keepaspectratio]{images/metrics-formulas.jpeg}}
   \caption{Formulas for accuracy, precision, recall and F1-score}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.9\textwidth,keepaspectratio]{images/content-metrics.png}}
   \caption{Content-based classification metrics.}
 \end{figure}
 
-As seen above, the models were qui
-
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.9\textwidth,keepaspectratio]{images/headline-results.png}}
   \caption{Headline-based classification metrics.}
@@ -225,7 +223,7 @@ The web-scraping is performed at the level of the Node.js server, by means of th
 
 All the scrape functionality is exposed via an API endpoint and when making a request to that endpoint, the news are scraped and saved into the MondoDB. database of the application.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.9\textwidth,keepaspectratio]{images/mongo-sources.png}}
   \caption{A document from the database storing one of the news sources scraped.}
@@ -241,7 +239,7 @@ The information obtained through crowdsourcing was leveraged to provide two addi
 
 In addition to providing two additional analysis points, crowdsourcing was also used with the motivation of collecting a dataset that can be further used to train machine learning models upon. One of the largest issues in the area of fake news detection is the small number of up-to-date datasets of fake and real news. This user feedbacks submitted through this application could potentially result in a multi-labelled dataset that is updated with data on a regular basis. However, there are is one great issue that need to be overcome in the future. Users could provide intentionally misleading reviews, so perhaps moderators would be needed to curate the list of reviews and ban suspicions user accounts or bots that could use the application. Alternatively, maybe a much better solution would be to implement a machine learning model to detect fake review. There is quite a lot of research on fake reviews detection, such as \cite{a11}\cite{a12}, that could perhaps be useful in determining the veracity of the users' reviews.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=0.9\textwidth,keepaspectratio]{images/user-feedack-form.png}}
   \caption{User feedback form screenshot from the application.}
